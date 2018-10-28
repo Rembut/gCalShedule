@@ -3,19 +3,14 @@ const readline = require('readline');
 const {google} = require('googleapis');
 
 // If modifying these scopes, delete token.json.
-const SCOPES = ['https://www.googleapis.com/auth/calendar'];
+const SCOPES = ['https://www.googleapis.com/auth/calendar.readonly'];
 const TOKEN_PATH = 'token.json';
 
 // Load client secrets from a local file.
 fs.readFile('credentials_fcsfm.json', (err, content) => {
   if (err) return console.log('Error loading client secret file:', err);
   // Authorize a client with credentials, then call the Google Calendar API.
-  //authorize(JSON.parse(content), listEvents);
-  //authorize(JSON.parse(content), createEvent);
-  authorize(JSON.parse(content), createCalendar);
-  //authorize(JSON.parse(content), getCalendars);
-  //authorize(JSON.parse(content), deleteCalendar);
-  //authorize(JSON.parse(content), purgeTestCalendars);
+  authorize(JSON.parse(content), listEvents);
 });
 
 /**
@@ -75,10 +70,9 @@ function getAccessToken(oAuth2Client, callback) {
 function listEvents(auth) {
   const calendar = google.calendar({version: 'v3', auth});
   calendar.events.list({
-    //calendarId: 'primary',
-    calendarId: /*''*/,
+    calendarId: 'primary',
     timeMin: (new Date()).toISOString(),
-    maxResults: 25,
+    maxResults: 10,
     singleEvents: true,
     orderBy: 'startTime',
   }, (err, res) => {
@@ -92,96 +86,6 @@ function listEvents(auth) {
       });
     } else {
       console.log('No upcoming events found.');
-    }
-  });
-}
-
-// Refer to the Node.js quickstart on how to setup the environment:
-// https://developers.google.com/calendar/quickstart/node
-// Change the scope to 'https://www.googleapis.com/auth/calendar' and delete any
-// stored credentials.
-
-var event = {
-  'summary': 'Google I/O 2018',
-  'start': {
-    'dateTime': '2018-09-24T12:00:00+03:00',
-  },
-  'end': {
-    'dateTime': '2018-09-24T13:00:00+03:00',
-  },
-};
-
-
-function createEvent(auth) {
-  const calendar = google.calendar({version: 'v3', auth});
-  //console.log(calendar.events.insert);
-  calendar.events.insert({
-  auth: auth,
-  //calendarId: 'primary',
-  calendarId: '2ifti1hj3k47lc4hvohv40dnbc@group.calendar.google.com',
-  resource: event,
-}, function(err, event) {
-  if (err) {
-    console.log('There was an error contacting the Calendar service: ' + err);
-    return;
-  }
-  console.log('Event created: %s', event);
-});
-}
-
-
-function createCalendar(auth) {
-  const calendar = google.calendar({version: 'v3', auth});
-  //console.log(calendar.calendars.insert);
-  calendar.calendars.insert({
-  auth: auth,
-  resource: {"summary": "TEST4","timeZone": "Europe/Kiev"}
-}, function(err, res) {
-  if (err) {
-    console.log('There was an error contacting the Calendar service: ' + err);
-    return;
-  }
-  console.log('calendar created: %s',res.data);
-  fs.writeFile('Object.json', JSON.stringify(res.data), (err) => {
-        if (err) console.error(err);
-        console.log('Token stored to', 'Object.json');
-      });
-});
-}
-
-function deleteCalendar(auth) {
-  const calendar = google.calendar({version: 'v3', auth});
-  //console.log(calendar.calendars.insert);
-  calendar.calendars.delete({calendarId: /*""*/});
-}
-
-function purgeTestCalendars(auth) {
-  const calendar = google.calendar({version: 'v3', auth});
-  calendar.calendarList.list({
-  }, (err, res) => {
-    res.data.items.forEach(element => {
-      if (element.summary.indexOf("TEST") !== -1){
-        console.log("DELETING", element.summary, element.id)
-        calendar.calendars.delete({calendarId: element.id});
-      }
-    })
-  })
-}
-
-
-function getCalendars(auth) {
-  const calendar = google.calendar({version: 'v3', auth});
-  calendar.calendarList.list({
-  }, (err, res) => {
-    if (err) return console.log('The API returned an error: ' + err);
-    if (res.data.items.length) {
-      //console.log(res.data.items)
-      fs.writeFile('CalendarsList.json', JSON.stringify(res.data), (err) => {
-        if (err) console.error(err);
-        console.log('Token stored to', 'Object.json');
-      });
-    } else {
-      console.log('No calendars found.');
     }
   });
 }
