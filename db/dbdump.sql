@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 9.6.10
--- Dumped by pg_dump version 9.6.10
+-- Dumped from database version 10.5
+-- Dumped by pg_dump version 10.5
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -34,7 +34,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- Name: Audience; Type: TABLE; Schema: public; Owner: postgres
+-- Name: Audience; Type: TABLE; Schema: public; Owner: admin
 --
 
 CREATE TABLE public."Audience" (
@@ -45,10 +45,10 @@ CREATE TABLE public."Audience" (
 );
 
 
-ALTER TABLE public."Audience" OWNER TO postgres;
+ALTER TABLE public."Audience" OWNER TO admin;
 
 --
--- Name: AudienceCalendar; Type: TABLE; Schema: public; Owner: postgres
+-- Name: AudienceCalendar; Type: TABLE; Schema: public; Owner: admin
 --
 
 CREATE TABLE public."AudienceCalendar" (
@@ -57,10 +57,10 @@ CREATE TABLE public."AudienceCalendar" (
 );
 
 
-ALTER TABLE public."AudienceCalendar" OWNER TO postgres;
+ALTER TABLE public."AudienceCalendar" OWNER TO admin;
 
 --
--- Name: Audience_ID_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: Audience_ID_seq; Type: SEQUENCE; Schema: public; Owner: admin
 --
 
 CREATE SEQUENCE public."Audience_ID_seq"
@@ -71,17 +71,17 @@ CREATE SEQUENCE public."Audience_ID_seq"
     CACHE 1;
 
 
-ALTER TABLE public."Audience_ID_seq" OWNER TO postgres;
+ALTER TABLE public."Audience_ID_seq" OWNER TO admin;
 
 --
--- Name: Audience_ID_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: Audience_ID_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: admin
 --
 
 ALTER SEQUENCE public."Audience_ID_seq" OWNED BY public."Audience"."ID";
 
 
 --
--- Name: Calendar; Type: TABLE; Schema: public; Owner: postgres
+-- Name: Calendar; Type: TABLE; Schema: public; Owner: admin
 --
 
 CREATE TABLE public."Calendar" (
@@ -92,10 +92,10 @@ CREATE TABLE public."Calendar" (
 );
 
 
-ALTER TABLE public."Calendar" OWNER TO postgres;
+ALTER TABLE public."Calendar" OWNER TO admin;
 
 --
--- Name: Calendar_ID_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: Calendar_ID_seq; Type: SEQUENCE; Schema: public; Owner: admin
 --
 
 CREATE SEQUENCE public."Calendar_ID_seq"
@@ -106,17 +106,17 @@ CREATE SEQUENCE public."Calendar_ID_seq"
     CACHE 1;
 
 
-ALTER TABLE public."Calendar_ID_seq" OWNER TO postgres;
+ALTER TABLE public."Calendar_ID_seq" OWNER TO admin;
 
 --
--- Name: Calendar_ID_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: Calendar_ID_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: admin
 --
 
 ALTER SEQUENCE public."Calendar_ID_seq" OWNED BY public."Calendar"."ID";
 
 
 --
--- Name: Chair; Type: TABLE; Schema: public; Owner: postgres
+-- Name: Chair; Type: TABLE; Schema: public; Owner: admin
 --
 
 CREATE TABLE public."Chair" (
@@ -126,10 +126,10 @@ CREATE TABLE public."Chair" (
 );
 
 
-ALTER TABLE public."Chair" OWNER TO postgres;
+ALTER TABLE public."Chair" OWNER TO admin;
 
 --
--- Name: Chair_ID_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: Chair_ID_seq; Type: SEQUENCE; Schema: public; Owner: admin
 --
 
 CREATE SEQUENCE public."Chair_ID_seq"
@@ -140,17 +140,17 @@ CREATE SEQUENCE public."Chair_ID_seq"
     CACHE 1;
 
 
-ALTER TABLE public."Chair_ID_seq" OWNER TO postgres;
+ALTER TABLE public."Chair_ID_seq" OWNER TO admin;
 
 --
--- Name: Chair_ID_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: Chair_ID_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: admin
 --
 
 ALTER SEQUENCE public."Chair_ID_seq" OWNED BY public."Chair"."ID";
 
 
 --
--- Name: Checkpoint; Type: TABLE; Schema: public; Owner: postgres
+-- Name: Checkpoint; Type: TABLE; Schema: public; Owner: admin
 --
 
 CREATE TABLE public."Checkpoint" (
@@ -162,10 +162,10 @@ CREATE TABLE public."Checkpoint" (
 );
 
 
-ALTER TABLE public."Checkpoint" OWNER TO postgres;
+ALTER TABLE public."Checkpoint" OWNER TO admin;
 
 --
--- Name: Checkpoint_ID_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: Checkpoint_ID_seq; Type: SEQUENCE; Schema: public; Owner: admin
 --
 
 CREATE SEQUENCE public."Checkpoint_ID_seq"
@@ -176,17 +176,17 @@ CREATE SEQUENCE public."Checkpoint_ID_seq"
     CACHE 1;
 
 
-ALTER TABLE public."Checkpoint_ID_seq" OWNER TO postgres;
+ALTER TABLE public."Checkpoint_ID_seq" OWNER TO admin;
 
 --
--- Name: Checkpoint_ID_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: Checkpoint_ID_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: admin
 --
 
 ALTER SEQUENCE public."Checkpoint_ID_seq" OWNED BY public."Checkpoint"."ID";
 
 
 --
--- Name: ControlForm; Type: TABLE; Schema: public; Owner: postgres
+-- Name: ControlForm; Type: TABLE; Schema: public; Owner: admin
 --
 
 CREATE TABLE public."ControlForm" (
@@ -195,10 +195,10 @@ CREATE TABLE public."ControlForm" (
 );
 
 
-ALTER TABLE public."ControlForm" OWNER TO postgres;
+ALTER TABLE public."ControlForm" OWNER TO admin;
 
 --
--- Name: ControlForm_ID_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: ControlForm_ID_seq; Type: SEQUENCE; Schema: public; Owner: admin
 --
 
 CREATE SEQUENCE public."ControlForm_ID_seq"
@@ -209,17 +209,17 @@ CREATE SEQUENCE public."ControlForm_ID_seq"
     CACHE 1;
 
 
-ALTER TABLE public."ControlForm_ID_seq" OWNER TO postgres;
+ALTER TABLE public."ControlForm_ID_seq" OWNER TO admin;
 
 --
--- Name: ControlForm_ID_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: ControlForm_ID_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: admin
 --
 
 ALTER SEQUENCE public."ControlForm_ID_seq" OWNED BY public."ControlForm"."ID";
 
 
 --
--- Name: Cource; Type: TABLE; Schema: public; Owner: postgres
+-- Name: Cource; Type: TABLE; Schema: public; Owner: admin
 --
 
 CREATE TABLE public."Cource" (
@@ -228,10 +228,10 @@ CREATE TABLE public."Cource" (
 );
 
 
-ALTER TABLE public."Cource" OWNER TO postgres;
+ALTER TABLE public."Cource" OWNER TO admin;
 
 --
--- Name: Cource_ID_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: Cource_ID_seq; Type: SEQUENCE; Schema: public; Owner: admin
 --
 
 CREATE SEQUENCE public."Cource_ID_seq"
@@ -242,17 +242,17 @@ CREATE SEQUENCE public."Cource_ID_seq"
     CACHE 1;
 
 
-ALTER TABLE public."Cource_ID_seq" OWNER TO postgres;
+ALTER TABLE public."Cource_ID_seq" OWNER TO admin;
 
 --
--- Name: Cource_ID_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: Cource_ID_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: admin
 --
 
 ALTER SEQUENCE public."Cource_ID_seq" OWNED BY public."Cource"."ID";
 
 
 --
--- Name: Day; Type: TABLE; Schema: public; Owner: postgres
+-- Name: Day; Type: TABLE; Schema: public; Owner: admin
 --
 
 CREATE TABLE public."Day" (
@@ -262,10 +262,10 @@ CREATE TABLE public."Day" (
 );
 
 
-ALTER TABLE public."Day" OWNER TO postgres;
+ALTER TABLE public."Day" OWNER TO admin;
 
 --
--- Name: Day_ID_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: Day_ID_seq; Type: SEQUENCE; Schema: public; Owner: admin
 --
 
 CREATE SEQUENCE public."Day_ID_seq"
@@ -276,17 +276,17 @@ CREATE SEQUENCE public."Day_ID_seq"
     CACHE 1;
 
 
-ALTER TABLE public."Day_ID_seq" OWNER TO postgres;
+ALTER TABLE public."Day_ID_seq" OWNER TO admin;
 
 --
--- Name: Day_ID_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: Day_ID_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: admin
 --
 
 ALTER SEQUENCE public."Day_ID_seq" OWNED BY public."Day"."ID";
 
 
 --
--- Name: Faculty; Type: TABLE; Schema: public; Owner: postgres
+-- Name: Faculty; Type: TABLE; Schema: public; Owner: admin
 --
 
 CREATE TABLE public."Faculty" (
@@ -295,10 +295,10 @@ CREATE TABLE public."Faculty" (
 );
 
 
-ALTER TABLE public."Faculty" OWNER TO postgres;
+ALTER TABLE public."Faculty" OWNER TO admin;
 
 --
--- Name: Faculty_ID_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: Faculty_ID_seq; Type: SEQUENCE; Schema: public; Owner: admin
 --
 
 CREATE SEQUENCE public."Faculty_ID_seq"
@@ -309,17 +309,17 @@ CREATE SEQUENCE public."Faculty_ID_seq"
     CACHE 1;
 
 
-ALTER TABLE public."Faculty_ID_seq" OWNER TO postgres;
+ALTER TABLE public."Faculty_ID_seq" OWNER TO admin;
 
 --
--- Name: Faculty_ID_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: Faculty_ID_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: admin
 --
 
 ALTER SEQUENCE public."Faculty_ID_seq" OWNED BY public."Faculty"."ID";
 
 
 --
--- Name: Flow; Type: TABLE; Schema: public; Owner: postgres
+-- Name: Flow; Type: TABLE; Schema: public; Owner: admin
 --
 
 CREATE TABLE public."Flow" (
@@ -328,10 +328,10 @@ CREATE TABLE public."Flow" (
 );
 
 
-ALTER TABLE public."Flow" OWNER TO postgres;
+ALTER TABLE public."Flow" OWNER TO admin;
 
 --
--- Name: Flow_ID_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: Flow_ID_seq; Type: SEQUENCE; Schema: public; Owner: admin
 --
 
 CREATE SEQUENCE public."Flow_ID_seq"
@@ -342,17 +342,17 @@ CREATE SEQUENCE public."Flow_ID_seq"
     CACHE 1;
 
 
-ALTER TABLE public."Flow_ID_seq" OWNER TO postgres;
+ALTER TABLE public."Flow_ID_seq" OWNER TO admin;
 
 --
--- Name: Flow_ID_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: Flow_ID_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: admin
 --
 
 ALTER SEQUENCE public."Flow_ID_seq" OWNED BY public."Flow"."ID";
 
 
 --
--- Name: Group; Type: TABLE; Schema: public; Owner: postgres
+-- Name: Group; Type: TABLE; Schema: public; Owner: admin
 --
 
 CREATE TABLE public."Group" (
@@ -364,10 +364,10 @@ CREATE TABLE public."Group" (
 );
 
 
-ALTER TABLE public."Group" OWNER TO postgres;
+ALTER TABLE public."Group" OWNER TO admin;
 
 --
--- Name: GroupCalendar; Type: TABLE; Schema: public; Owner: postgres
+-- Name: GroupCalendar; Type: TABLE; Schema: public; Owner: admin
 --
 
 CREATE TABLE public."GroupCalendar" (
@@ -376,10 +376,10 @@ CREATE TABLE public."GroupCalendar" (
 );
 
 
-ALTER TABLE public."GroupCalendar" OWNER TO postgres;
+ALTER TABLE public."GroupCalendar" OWNER TO admin;
 
 --
--- Name: Group_ID_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: Group_ID_seq; Type: SEQUENCE; Schema: public; Owner: admin
 --
 
 CREATE SEQUENCE public."Group_ID_seq"
@@ -390,17 +390,17 @@ CREATE SEQUENCE public."Group_ID_seq"
     CACHE 1;
 
 
-ALTER TABLE public."Group_ID_seq" OWNER TO postgres;
+ALTER TABLE public."Group_ID_seq" OWNER TO admin;
 
 --
--- Name: Group_ID_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: Group_ID_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: admin
 --
 
 ALTER SEQUENCE public."Group_ID_seq" OWNED BY public."Group"."ID";
 
 
 --
--- Name: Lesson; Type: TABLE; Schema: public; Owner: postgres
+-- Name: Lesson; Type: TABLE; Schema: public; Owner: admin
 --
 
 CREATE TABLE public."Lesson" (
@@ -412,10 +412,10 @@ CREATE TABLE public."Lesson" (
 );
 
 
-ALTER TABLE public."Lesson" OWNER TO postgres;
+ALTER TABLE public."Lesson" OWNER TO admin;
 
 --
--- Name: LessonCheckpoint; Type: TABLE; Schema: public; Owner: postgres
+-- Name: LessonCheckpoint; Type: TABLE; Schema: public; Owner: admin
 --
 
 CREATE TABLE public."LessonCheckpoint" (
@@ -425,10 +425,10 @@ CREATE TABLE public."LessonCheckpoint" (
 );
 
 
-ALTER TABLE public."LessonCheckpoint" OWNER TO postgres;
+ALTER TABLE public."LessonCheckpoint" OWNER TO admin;
 
 --
--- Name: LessonType; Type: TABLE; Schema: public; Owner: postgres
+-- Name: LessonType; Type: TABLE; Schema: public; Owner: admin
 --
 
 CREATE TABLE public."LessonType" (
@@ -438,10 +438,10 @@ CREATE TABLE public."LessonType" (
 );
 
 
-ALTER TABLE public."LessonType" OWNER TO postgres;
+ALTER TABLE public."LessonType" OWNER TO admin;
 
 --
--- Name: LessonType_ID_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: LessonType_ID_seq; Type: SEQUENCE; Schema: public; Owner: admin
 --
 
 CREATE SEQUENCE public."LessonType_ID_seq"
@@ -452,17 +452,17 @@ CREATE SEQUENCE public."LessonType_ID_seq"
     CACHE 1;
 
 
-ALTER TABLE public."LessonType_ID_seq" OWNER TO postgres;
+ALTER TABLE public."LessonType_ID_seq" OWNER TO admin;
 
 --
--- Name: LessonType_ID_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: LessonType_ID_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: admin
 --
 
 ALTER SEQUENCE public."LessonType_ID_seq" OWNED BY public."LessonType"."ID";
 
 
 --
--- Name: Lesson_ID_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: Lesson_ID_seq; Type: SEQUENCE; Schema: public; Owner: admin
 --
 
 CREATE SEQUENCE public."Lesson_ID_seq"
@@ -473,17 +473,17 @@ CREATE SEQUENCE public."Lesson_ID_seq"
     CACHE 1;
 
 
-ALTER TABLE public."Lesson_ID_seq" OWNER TO postgres;
+ALTER TABLE public."Lesson_ID_seq" OWNER TO admin;
 
 --
--- Name: Lesson_ID_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: Lesson_ID_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: admin
 --
 
 ALTER SEQUENCE public."Lesson_ID_seq" OWNED BY public."Lesson"."ID";
 
 
 --
--- Name: Level; Type: TABLE; Schema: public; Owner: postgres
+-- Name: Level; Type: TABLE; Schema: public; Owner: admin
 --
 
 CREATE TABLE public."Level" (
@@ -492,10 +492,10 @@ CREATE TABLE public."Level" (
 );
 
 
-ALTER TABLE public."Level" OWNER TO postgres;
+ALTER TABLE public."Level" OWNER TO admin;
 
 --
--- Name: Level_ID_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: Level_ID_seq; Type: SEQUENCE; Schema: public; Owner: admin
 --
 
 CREATE SEQUENCE public."Level_ID_seq"
@@ -506,17 +506,17 @@ CREATE SEQUENCE public."Level_ID_seq"
     CACHE 1;
 
 
-ALTER TABLE public."Level_ID_seq" OWNER TO postgres;
+ALTER TABLE public."Level_ID_seq" OWNER TO admin;
 
 --
--- Name: Level_ID_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: Level_ID_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: admin
 --
 
 ALTER SEQUENCE public."Level_ID_seq" OWNED BY public."Level"."ID";
 
 
 --
--- Name: Number; Type: TABLE; Schema: public; Owner: postgres
+-- Name: Number; Type: TABLE; Schema: public; Owner: admin
 --
 
 CREATE TABLE public."Number" (
@@ -527,10 +527,10 @@ CREATE TABLE public."Number" (
 );
 
 
-ALTER TABLE public."Number" OWNER TO postgres;
+ALTER TABLE public."Number" OWNER TO admin;
 
 --
--- Name: Number_ID_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: Number_ID_seq; Type: SEQUENCE; Schema: public; Owner: admin
 --
 
 CREATE SEQUENCE public."Number_ID_seq"
@@ -541,17 +541,17 @@ CREATE SEQUENCE public."Number_ID_seq"
     CACHE 1;
 
 
-ALTER TABLE public."Number_ID_seq" OWNER TO postgres;
+ALTER TABLE public."Number_ID_seq" OWNER TO admin;
 
 --
--- Name: Number_ID_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: Number_ID_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: admin
 --
 
 ALTER SEQUENCE public."Number_ID_seq" OWNED BY public."Number"."ID";
 
 
 --
--- Name: Permision; Type: TABLE; Schema: public; Owner: postgres
+-- Name: Permision; Type: TABLE; Schema: public; Owner: admin
 --
 
 CREATE TABLE public."Permision" (
@@ -560,10 +560,10 @@ CREATE TABLE public."Permision" (
 );
 
 
-ALTER TABLE public."Permision" OWNER TO postgres;
+ALTER TABLE public."Permision" OWNER TO admin;
 
 --
--- Name: Permision_ID_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: Permision_ID_seq; Type: SEQUENCE; Schema: public; Owner: admin
 --
 
 CREATE SEQUENCE public."Permision_ID_seq"
@@ -574,17 +574,17 @@ CREATE SEQUENCE public."Permision_ID_seq"
     CACHE 1;
 
 
-ALTER TABLE public."Permision_ID_seq" OWNER TO postgres;
+ALTER TABLE public."Permision_ID_seq" OWNER TO admin;
 
 --
--- Name: Permision_ID_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: Permision_ID_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: admin
 --
 
 ALTER SEQUENCE public."Permision_ID_seq" OWNED BY public."Permision"."ID";
 
 
 --
--- Name: Post; Type: TABLE; Schema: public; Owner: postgres
+-- Name: Post; Type: TABLE; Schema: public; Owner: admin
 --
 
 CREATE TABLE public."Post" (
@@ -594,10 +594,10 @@ CREATE TABLE public."Post" (
 );
 
 
-ALTER TABLE public."Post" OWNER TO postgres;
+ALTER TABLE public."Post" OWNER TO admin;
 
 --
--- Name: Post_ID_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: Post_ID_seq; Type: SEQUENCE; Schema: public; Owner: admin
 --
 
 CREATE SEQUENCE public."Post_ID_seq"
@@ -608,17 +608,17 @@ CREATE SEQUENCE public."Post_ID_seq"
     CACHE 1;
 
 
-ALTER TABLE public."Post_ID_seq" OWNER TO postgres;
+ALTER TABLE public."Post_ID_seq" OWNER TO admin;
 
 --
--- Name: Post_ID_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: Post_ID_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: admin
 --
 
 ALTER SEQUENCE public."Post_ID_seq" OWNED BY public."Post"."ID";
 
 
 --
--- Name: Shedule; Type: TABLE; Schema: public; Owner: postgres
+-- Name: Shedule; Type: TABLE; Schema: public; Owner: admin
 --
 
 CREATE TABLE public."Shedule" (
@@ -629,10 +629,10 @@ CREATE TABLE public."Shedule" (
 );
 
 
-ALTER TABLE public."Shedule" OWNER TO postgres;
+ALTER TABLE public."Shedule" OWNER TO admin;
 
 --
--- Name: SheduleLesson; Type: TABLE; Schema: public; Owner: postgres
+-- Name: SheduleLesson; Type: TABLE; Schema: public; Owner: admin
 --
 
 CREATE TABLE public."SheduleLesson" (
@@ -641,10 +641,10 @@ CREATE TABLE public."SheduleLesson" (
 );
 
 
-ALTER TABLE public."SheduleLesson" OWNER TO postgres;
+ALTER TABLE public."SheduleLesson" OWNER TO admin;
 
 --
--- Name: SheduleWorkerPermision; Type: TABLE; Schema: public; Owner: postgres
+-- Name: SheduleWorkerPermision; Type: TABLE; Schema: public; Owner: admin
 --
 
 CREATE TABLE public."SheduleWorkerPermision" (
@@ -654,10 +654,10 @@ CREATE TABLE public."SheduleWorkerPermision" (
 );
 
 
-ALTER TABLE public."SheduleWorkerPermision" OWNER TO postgres;
+ALTER TABLE public."SheduleWorkerPermision" OWNER TO admin;
 
 --
--- Name: SheduleWorkerPermision_PermisionID_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: SheduleWorkerPermision_PermisionID_seq; Type: SEQUENCE; Schema: public; Owner: admin
 --
 
 CREATE SEQUENCE public."SheduleWorkerPermision_PermisionID_seq"
@@ -668,17 +668,17 @@ CREATE SEQUENCE public."SheduleWorkerPermision_PermisionID_seq"
     CACHE 1;
 
 
-ALTER TABLE public."SheduleWorkerPermision_PermisionID_seq" OWNER TO postgres;
+ALTER TABLE public."SheduleWorkerPermision_PermisionID_seq" OWNER TO admin;
 
 --
--- Name: SheduleWorkerPermision_PermisionID_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: SheduleWorkerPermision_PermisionID_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: admin
 --
 
 ALTER SEQUENCE public."SheduleWorkerPermision_PermisionID_seq" OWNED BY public."SheduleWorkerPermision"."PermisionID";
 
 
 --
--- Name: SheduleWorkerPermision_WorkerID_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: SheduleWorkerPermision_WorkerID_seq; Type: SEQUENCE; Schema: public; Owner: admin
 --
 
 CREATE SEQUENCE public."SheduleWorkerPermision_WorkerID_seq"
@@ -689,17 +689,17 @@ CREATE SEQUENCE public."SheduleWorkerPermision_WorkerID_seq"
     CACHE 1;
 
 
-ALTER TABLE public."SheduleWorkerPermision_WorkerID_seq" OWNER TO postgres;
+ALTER TABLE public."SheduleWorkerPermision_WorkerID_seq" OWNER TO admin;
 
 --
--- Name: SheduleWorkerPermision_WorkerID_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: SheduleWorkerPermision_WorkerID_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: admin
 --
 
 ALTER SEQUENCE public."SheduleWorkerPermision_WorkerID_seq" OWNED BY public."SheduleWorkerPermision"."WorkerID";
 
 
 --
--- Name: Shedule_ID_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: Shedule_ID_seq; Type: SEQUENCE; Schema: public; Owner: admin
 --
 
 CREATE SEQUENCE public."Shedule_ID_seq"
@@ -710,17 +710,17 @@ CREATE SEQUENCE public."Shedule_ID_seq"
     CACHE 1;
 
 
-ALTER TABLE public."Shedule_ID_seq" OWNER TO postgres;
+ALTER TABLE public."Shedule_ID_seq" OWNER TO admin;
 
 --
--- Name: Shedule_ID_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: Shedule_ID_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: admin
 --
 
 ALTER SEQUENCE public."Shedule_ID_seq" OWNED BY public."Shedule"."ID";
 
 
 --
--- Name: Speciality; Type: TABLE; Schema: public; Owner: postgres
+-- Name: Speciality; Type: TABLE; Schema: public; Owner: admin
 --
 
 CREATE TABLE public."Speciality" (
@@ -729,10 +729,10 @@ CREATE TABLE public."Speciality" (
 );
 
 
-ALTER TABLE public."Speciality" OWNER TO postgres;
+ALTER TABLE public."Speciality" OWNER TO admin;
 
 --
--- Name: Speciality_ID_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: Speciality_ID_seq; Type: SEQUENCE; Schema: public; Owner: admin
 --
 
 CREATE SEQUENCE public."Speciality_ID_seq"
@@ -743,17 +743,17 @@ CREATE SEQUENCE public."Speciality_ID_seq"
     CACHE 1;
 
 
-ALTER TABLE public."Speciality_ID_seq" OWNER TO postgres;
+ALTER TABLE public."Speciality_ID_seq" OWNER TO admin;
 
 --
--- Name: Speciality_ID_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: Speciality_ID_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: admin
 --
 
 ALTER SEQUENCE public."Speciality_ID_seq" OWNED BY public."Speciality"."ID";
 
 
 --
--- Name: Specialization; Type: TABLE; Schema: public; Owner: postgres
+-- Name: Specialization; Type: TABLE; Schema: public; Owner: admin
 --
 
 CREATE TABLE public."Specialization" (
@@ -762,10 +762,10 @@ CREATE TABLE public."Specialization" (
 );
 
 
-ALTER TABLE public."Specialization" OWNER TO postgres;
+ALTER TABLE public."Specialization" OWNER TO admin;
 
 --
--- Name: Specialization_ID_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: Specialization_ID_seq; Type: SEQUENCE; Schema: public; Owner: admin
 --
 
 CREATE SEQUENCE public."Specialization_ID_seq"
@@ -776,17 +776,17 @@ CREATE SEQUENCE public."Specialization_ID_seq"
     CACHE 1;
 
 
-ALTER TABLE public."Specialization_ID_seq" OWNER TO postgres;
+ALTER TABLE public."Specialization_ID_seq" OWNER TO admin;
 
 --
--- Name: Specialization_ID_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: Specialization_ID_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: admin
 --
 
 ALTER SEQUENCE public."Specialization_ID_seq" OWNED BY public."Specialization"."ID";
 
 
 --
--- Name: Subgroup; Type: TABLE; Schema: public; Owner: postgres
+-- Name: Subgroup; Type: TABLE; Schema: public; Owner: admin
 --
 
 CREATE TABLE public."Subgroup" (
@@ -797,10 +797,10 @@ CREATE TABLE public."Subgroup" (
 );
 
 
-ALTER TABLE public."Subgroup" OWNER TO postgres;
+ALTER TABLE public."Subgroup" OWNER TO admin;
 
 --
--- Name: SubgroupFlow; Type: TABLE; Schema: public; Owner: postgres
+-- Name: SubgroupFlow; Type: TABLE; Schema: public; Owner: admin
 --
 
 CREATE TABLE public."SubgroupFlow" (
@@ -809,10 +809,10 @@ CREATE TABLE public."SubgroupFlow" (
 );
 
 
-ALTER TABLE public."SubgroupFlow" OWNER TO postgres;
+ALTER TABLE public."SubgroupFlow" OWNER TO admin;
 
 --
--- Name: Subgroup_ID_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: Subgroup_ID_seq; Type: SEQUENCE; Schema: public; Owner: admin
 --
 
 CREATE SEQUENCE public."Subgroup_ID_seq"
@@ -823,17 +823,17 @@ CREATE SEQUENCE public."Subgroup_ID_seq"
     CACHE 1;
 
 
-ALTER TABLE public."Subgroup_ID_seq" OWNER TO postgres;
+ALTER TABLE public."Subgroup_ID_seq" OWNER TO admin;
 
 --
--- Name: Subgroup_ID_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: Subgroup_ID_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: admin
 --
 
 ALTER SEQUENCE public."Subgroup_ID_seq" OWNED BY public."Subgroup"."ID";
 
 
 --
--- Name: Subject; Type: TABLE; Schema: public; Owner: postgres
+-- Name: Subject; Type: TABLE; Schema: public; Owner: admin
 --
 
 CREATE TABLE public."Subject" (
@@ -842,10 +842,10 @@ CREATE TABLE public."Subject" (
 );
 
 
-ALTER TABLE public."Subject" OWNER TO postgres;
+ALTER TABLE public."Subject" OWNER TO admin;
 
 --
--- Name: SubjectControlForm; Type: TABLE; Schema: public; Owner: postgres
+-- Name: SubjectControlForm; Type: TABLE; Schema: public; Owner: admin
 --
 
 CREATE TABLE public."SubjectControlForm" (
@@ -855,10 +855,10 @@ CREATE TABLE public."SubjectControlForm" (
 );
 
 
-ALTER TABLE public."SubjectControlForm" OWNER TO postgres;
+ALTER TABLE public."SubjectControlForm" OWNER TO admin;
 
 --
--- Name: SubjectControlFormTeacherPost; Type: TABLE; Schema: public; Owner: postgres
+-- Name: SubjectControlFormTeacherPost; Type: TABLE; Schema: public; Owner: admin
 --
 
 CREATE TABLE public."SubjectControlFormTeacherPost" (
@@ -868,10 +868,10 @@ CREATE TABLE public."SubjectControlFormTeacherPost" (
 );
 
 
-ALTER TABLE public."SubjectControlFormTeacherPost" OWNER TO postgres;
+ALTER TABLE public."SubjectControlFormTeacherPost" OWNER TO admin;
 
 --
--- Name: SubjectControlFormTeacherPost_ID_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: SubjectControlFormTeacherPost_ID_seq; Type: SEQUENCE; Schema: public; Owner: admin
 --
 
 CREATE SEQUENCE public."SubjectControlFormTeacherPost_ID_seq"
@@ -882,17 +882,17 @@ CREATE SEQUENCE public."SubjectControlFormTeacherPost_ID_seq"
     CACHE 1;
 
 
-ALTER TABLE public."SubjectControlFormTeacherPost_ID_seq" OWNER TO postgres;
+ALTER TABLE public."SubjectControlFormTeacherPost_ID_seq" OWNER TO admin;
 
 --
--- Name: SubjectControlFormTeacherPost_ID_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: SubjectControlFormTeacherPost_ID_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: admin
 --
 
 ALTER SEQUENCE public."SubjectControlFormTeacherPost_ID_seq" OWNED BY public."SubjectControlFormTeacherPost"."ID";
 
 
 --
--- Name: SubjectControlForm_ID_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: SubjectControlForm_ID_seq; Type: SEQUENCE; Schema: public; Owner: admin
 --
 
 CREATE SEQUENCE public."SubjectControlForm_ID_seq"
@@ -903,17 +903,17 @@ CREATE SEQUENCE public."SubjectControlForm_ID_seq"
     CACHE 1;
 
 
-ALTER TABLE public."SubjectControlForm_ID_seq" OWNER TO postgres;
+ALTER TABLE public."SubjectControlForm_ID_seq" OWNER TO admin;
 
 --
--- Name: SubjectControlForm_ID_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: SubjectControlForm_ID_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: admin
 --
 
 ALTER SEQUENCE public."SubjectControlForm_ID_seq" OWNED BY public."SubjectControlForm"."ID";
 
 
 --
--- Name: SubjectLessonType; Type: TABLE; Schema: public; Owner: postgres
+-- Name: SubjectLessonType; Type: TABLE; Schema: public; Owner: admin
 --
 
 CREATE TABLE public."SubjectLessonType" (
@@ -923,10 +923,10 @@ CREATE TABLE public."SubjectLessonType" (
 );
 
 
-ALTER TABLE public."SubjectLessonType" OWNER TO postgres;
+ALTER TABLE public."SubjectLessonType" OWNER TO admin;
 
 --
--- Name: SubjectLessonTypeTeacherPost; Type: TABLE; Schema: public; Owner: postgres
+-- Name: SubjectLessonTypeTeacherPost; Type: TABLE; Schema: public; Owner: admin
 --
 
 CREATE TABLE public."SubjectLessonTypeTeacherPost" (
@@ -936,10 +936,10 @@ CREATE TABLE public."SubjectLessonTypeTeacherPost" (
 );
 
 
-ALTER TABLE public."SubjectLessonTypeTeacherPost" OWNER TO postgres;
+ALTER TABLE public."SubjectLessonTypeTeacherPost" OWNER TO admin;
 
 --
--- Name: SubjectLessonTypeTeacherPost_ID_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: SubjectLessonTypeTeacherPost_ID_seq; Type: SEQUENCE; Schema: public; Owner: admin
 --
 
 CREATE SEQUENCE public."SubjectLessonTypeTeacherPost_ID_seq"
@@ -950,17 +950,17 @@ CREATE SEQUENCE public."SubjectLessonTypeTeacherPost_ID_seq"
     CACHE 1;
 
 
-ALTER TABLE public."SubjectLessonTypeTeacherPost_ID_seq" OWNER TO postgres;
+ALTER TABLE public."SubjectLessonTypeTeacherPost_ID_seq" OWNER TO admin;
 
 --
--- Name: SubjectLessonTypeTeacherPost_ID_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: SubjectLessonTypeTeacherPost_ID_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: admin
 --
 
 ALTER SEQUENCE public."SubjectLessonTypeTeacherPost_ID_seq" OWNED BY public."SubjectLessonTypeTeacherPost"."ID";
 
 
 --
--- Name: SubjectLessonType_ID_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: SubjectLessonType_ID_seq; Type: SEQUENCE; Schema: public; Owner: admin
 --
 
 CREATE SEQUENCE public."SubjectLessonType_ID_seq"
@@ -971,17 +971,17 @@ CREATE SEQUENCE public."SubjectLessonType_ID_seq"
     CACHE 1;
 
 
-ALTER TABLE public."SubjectLessonType_ID_seq" OWNER TO postgres;
+ALTER TABLE public."SubjectLessonType_ID_seq" OWNER TO admin;
 
 --
--- Name: SubjectLessonType_ID_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: SubjectLessonType_ID_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: admin
 --
 
 ALTER SEQUENCE public."SubjectLessonType_ID_seq" OWNED BY public."SubjectLessonType"."ID";
 
 
 --
--- Name: Subject_ID_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: Subject_ID_seq; Type: SEQUENCE; Schema: public; Owner: admin
 --
 
 CREATE SEQUENCE public."Subject_ID_seq"
@@ -992,17 +992,17 @@ CREATE SEQUENCE public."Subject_ID_seq"
     CACHE 1;
 
 
-ALTER TABLE public."Subject_ID_seq" OWNER TO postgres;
+ALTER TABLE public."Subject_ID_seq" OWNER TO admin;
 
 --
--- Name: Subject_ID_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: Subject_ID_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: admin
 --
 
 ALTER SEQUENCE public."Subject_ID_seq" OWNED BY public."Subject"."ID";
 
 
 --
--- Name: Teacher; Type: TABLE; Schema: public; Owner: postgres
+-- Name: Teacher; Type: TABLE; Schema: public; Owner: admin
 --
 
 CREATE TABLE public."Teacher" (
@@ -1013,10 +1013,10 @@ CREATE TABLE public."Teacher" (
 );
 
 
-ALTER TABLE public."Teacher" OWNER TO postgres;
+ALTER TABLE public."Teacher" OWNER TO admin;
 
 --
--- Name: TeacherChair; Type: TABLE; Schema: public; Owner: postgres
+-- Name: TeacherChair; Type: TABLE; Schema: public; Owner: admin
 --
 
 CREATE TABLE public."TeacherChair" (
@@ -1025,10 +1025,10 @@ CREATE TABLE public."TeacherChair" (
 );
 
 
-ALTER TABLE public."TeacherChair" OWNER TO postgres;
+ALTER TABLE public."TeacherChair" OWNER TO admin;
 
 --
--- Name: TeacherPost; Type: TABLE; Schema: public; Owner: postgres
+-- Name: TeacherPost; Type: TABLE; Schema: public; Owner: admin
 --
 
 CREATE TABLE public."TeacherPost" (
@@ -1038,10 +1038,10 @@ CREATE TABLE public."TeacherPost" (
 );
 
 
-ALTER TABLE public."TeacherPost" OWNER TO postgres;
+ALTER TABLE public."TeacherPost" OWNER TO admin;
 
 --
--- Name: TeacherPost_ID_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: TeacherPost_ID_seq; Type: SEQUENCE; Schema: public; Owner: admin
 --
 
 CREATE SEQUENCE public."TeacherPost_ID_seq"
@@ -1052,17 +1052,17 @@ CREATE SEQUENCE public."TeacherPost_ID_seq"
     CACHE 1;
 
 
-ALTER TABLE public."TeacherPost_ID_seq" OWNER TO postgres;
+ALTER TABLE public."TeacherPost_ID_seq" OWNER TO admin;
 
 --
--- Name: TeacherPost_ID_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: TeacherPost_ID_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: admin
 --
 
 ALTER SEQUENCE public."TeacherPost_ID_seq" OWNED BY public."TeacherPost"."ID";
 
 
 --
--- Name: Teacher_ID_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: Teacher_ID_seq; Type: SEQUENCE; Schema: public; Owner: admin
 --
 
 CREATE SEQUENCE public."Teacher_ID_seq"
@@ -1073,17 +1073,17 @@ CREATE SEQUENCE public."Teacher_ID_seq"
     CACHE 1;
 
 
-ALTER TABLE public."Teacher_ID_seq" OWNER TO postgres;
+ALTER TABLE public."Teacher_ID_seq" OWNER TO admin;
 
 --
--- Name: Teacher_ID_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: Teacher_ID_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: admin
 --
 
 ALTER SEQUENCE public."Teacher_ID_seq" OWNED BY public."Teacher"."ID";
 
 
 --
--- Name: TecherCalendar; Type: TABLE; Schema: public; Owner: postgres
+-- Name: TecherCalendar; Type: TABLE; Schema: public; Owner: admin
 --
 
 CREATE TABLE public."TecherCalendar" (
@@ -1092,10 +1092,10 @@ CREATE TABLE public."TecherCalendar" (
 );
 
 
-ALTER TABLE public."TecherCalendar" OWNER TO postgres;
+ALTER TABLE public."TecherCalendar" OWNER TO admin;
 
 --
--- Name: Time; Type: TABLE; Schema: public; Owner: postgres
+-- Name: Time; Type: TABLE; Schema: public; Owner: admin
 --
 
 CREATE TABLE public."Time" (
@@ -1106,10 +1106,10 @@ CREATE TABLE public."Time" (
 );
 
 
-ALTER TABLE public."Time" OWNER TO postgres;
+ALTER TABLE public."Time" OWNER TO admin;
 
 --
--- Name: Time_ID_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: Time_ID_seq; Type: SEQUENCE; Schema: public; Owner: admin
 --
 
 CREATE SEQUENCE public."Time_ID_seq"
@@ -1120,17 +1120,17 @@ CREATE SEQUENCE public."Time_ID_seq"
     CACHE 1;
 
 
-ALTER TABLE public."Time_ID_seq" OWNER TO postgres;
+ALTER TABLE public."Time_ID_seq" OWNER TO admin;
 
 --
--- Name: Time_ID_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: Time_ID_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: admin
 --
 
 ALTER SEQUENCE public."Time_ID_seq" OWNED BY public."Time"."ID";
 
 
 --
--- Name: Week; Type: TABLE; Schema: public; Owner: postgres
+-- Name: Week; Type: TABLE; Schema: public; Owner: admin
 --
 
 CREATE TABLE public."Week" (
@@ -1139,10 +1139,10 @@ CREATE TABLE public."Week" (
 );
 
 
-ALTER TABLE public."Week" OWNER TO postgres;
+ALTER TABLE public."Week" OWNER TO admin;
 
 --
--- Name: Week_ID_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: Week_ID_seq; Type: SEQUENCE; Schema: public; Owner: admin
 --
 
 CREATE SEQUENCE public."Week_ID_seq"
@@ -1153,17 +1153,17 @@ CREATE SEQUENCE public."Week_ID_seq"
     CACHE 1;
 
 
-ALTER TABLE public."Week_ID_seq" OWNER TO postgres;
+ALTER TABLE public."Week_ID_seq" OWNER TO admin;
 
 --
--- Name: Week_ID_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: Week_ID_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: admin
 --
 
 ALTER SEQUENCE public."Week_ID_seq" OWNED BY public."Week"."ID";
 
 
 --
--- Name: Worker; Type: TABLE; Schema: public; Owner: postgres
+-- Name: Worker; Type: TABLE; Schema: public; Owner: admin
 --
 
 CREATE TABLE public."Worker" (
@@ -1176,10 +1176,10 @@ CREATE TABLE public."Worker" (
 );
 
 
-ALTER TABLE public."Worker" OWNER TO postgres;
+ALTER TABLE public."Worker" OWNER TO admin;
 
 --
--- Name: Worker_ID_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: Worker_ID_seq; Type: SEQUENCE; Schema: public; Owner: admin
 --
 
 CREATE SEQUENCE public."Worker_ID_seq"
@@ -1190,241 +1190,241 @@ CREATE SEQUENCE public."Worker_ID_seq"
     CACHE 1;
 
 
-ALTER TABLE public."Worker_ID_seq" OWNER TO postgres;
+ALTER TABLE public."Worker_ID_seq" OWNER TO admin;
 
 --
--- Name: Worker_ID_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: Worker_ID_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: admin
 --
 
 ALTER SEQUENCE public."Worker_ID_seq" OWNED BY public."Worker"."ID";
 
 
 --
--- Name: Audience ID; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: Audience ID; Type: DEFAULT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."Audience" ALTER COLUMN "ID" SET DEFAULT nextval('public."Audience_ID_seq"'::regclass);
 
 
 --
--- Name: Calendar ID; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: Calendar ID; Type: DEFAULT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."Calendar" ALTER COLUMN "ID" SET DEFAULT nextval('public."Calendar_ID_seq"'::regclass);
 
 
 --
--- Name: Chair ID; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: Chair ID; Type: DEFAULT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."Chair" ALTER COLUMN "ID" SET DEFAULT nextval('public."Chair_ID_seq"'::regclass);
 
 
 --
--- Name: Checkpoint ID; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: Checkpoint ID; Type: DEFAULT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."Checkpoint" ALTER COLUMN "ID" SET DEFAULT nextval('public."Checkpoint_ID_seq"'::regclass);
 
 
 --
--- Name: ControlForm ID; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: ControlForm ID; Type: DEFAULT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."ControlForm" ALTER COLUMN "ID" SET DEFAULT nextval('public."ControlForm_ID_seq"'::regclass);
 
 
 --
--- Name: Cource ID; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: Cource ID; Type: DEFAULT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."Cource" ALTER COLUMN "ID" SET DEFAULT nextval('public."Cource_ID_seq"'::regclass);
 
 
 --
--- Name: Day ID; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: Day ID; Type: DEFAULT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."Day" ALTER COLUMN "ID" SET DEFAULT nextval('public."Day_ID_seq"'::regclass);
 
 
 --
--- Name: Faculty ID; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: Faculty ID; Type: DEFAULT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."Faculty" ALTER COLUMN "ID" SET DEFAULT nextval('public."Faculty_ID_seq"'::regclass);
 
 
 --
--- Name: Flow ID; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: Flow ID; Type: DEFAULT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."Flow" ALTER COLUMN "ID" SET DEFAULT nextval('public."Flow_ID_seq"'::regclass);
 
 
 --
--- Name: Group ID; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: Group ID; Type: DEFAULT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."Group" ALTER COLUMN "ID" SET DEFAULT nextval('public."Group_ID_seq"'::regclass);
 
 
 --
--- Name: Lesson ID; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: Lesson ID; Type: DEFAULT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."Lesson" ALTER COLUMN "ID" SET DEFAULT nextval('public."Lesson_ID_seq"'::regclass);
 
 
 --
--- Name: LessonType ID; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: LessonType ID; Type: DEFAULT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."LessonType" ALTER COLUMN "ID" SET DEFAULT nextval('public."LessonType_ID_seq"'::regclass);
 
 
 --
--- Name: Level ID; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: Level ID; Type: DEFAULT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."Level" ALTER COLUMN "ID" SET DEFAULT nextval('public."Level_ID_seq"'::regclass);
 
 
 --
--- Name: Number ID; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: Number ID; Type: DEFAULT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."Number" ALTER COLUMN "ID" SET DEFAULT nextval('public."Number_ID_seq"'::regclass);
 
 
 --
--- Name: Permision ID; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: Permision ID; Type: DEFAULT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."Permision" ALTER COLUMN "ID" SET DEFAULT nextval('public."Permision_ID_seq"'::regclass);
 
 
 --
--- Name: Post ID; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: Post ID; Type: DEFAULT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."Post" ALTER COLUMN "ID" SET DEFAULT nextval('public."Post_ID_seq"'::regclass);
 
 
 --
--- Name: Shedule ID; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: Shedule ID; Type: DEFAULT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."Shedule" ALTER COLUMN "ID" SET DEFAULT nextval('public."Shedule_ID_seq"'::regclass);
 
 
 --
--- Name: SheduleWorkerPermision WorkerID; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: SheduleWorkerPermision WorkerID; Type: DEFAULT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."SheduleWorkerPermision" ALTER COLUMN "WorkerID" SET DEFAULT nextval('public."SheduleWorkerPermision_WorkerID_seq"'::regclass);
 
 
 --
--- Name: SheduleWorkerPermision PermisionID; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: SheduleWorkerPermision PermisionID; Type: DEFAULT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."SheduleWorkerPermision" ALTER COLUMN "PermisionID" SET DEFAULT nextval('public."SheduleWorkerPermision_PermisionID_seq"'::regclass);
 
 
 --
--- Name: Speciality ID; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: Speciality ID; Type: DEFAULT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."Speciality" ALTER COLUMN "ID" SET DEFAULT nextval('public."Speciality_ID_seq"'::regclass);
 
 
 --
--- Name: Specialization ID; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: Specialization ID; Type: DEFAULT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."Specialization" ALTER COLUMN "ID" SET DEFAULT nextval('public."Specialization_ID_seq"'::regclass);
 
 
 --
--- Name: Subgroup ID; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: Subgroup ID; Type: DEFAULT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."Subgroup" ALTER COLUMN "ID" SET DEFAULT nextval('public."Subgroup_ID_seq"'::regclass);
 
 
 --
--- Name: Subject ID; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: Subject ID; Type: DEFAULT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."Subject" ALTER COLUMN "ID" SET DEFAULT nextval('public."Subject_ID_seq"'::regclass);
 
 
 --
--- Name: SubjectControlForm ID; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: SubjectControlForm ID; Type: DEFAULT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."SubjectControlForm" ALTER COLUMN "ID" SET DEFAULT nextval('public."SubjectControlForm_ID_seq"'::regclass);
 
 
 --
--- Name: SubjectControlFormTeacherPost ID; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: SubjectControlFormTeacherPost ID; Type: DEFAULT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."SubjectControlFormTeacherPost" ALTER COLUMN "ID" SET DEFAULT nextval('public."SubjectControlFormTeacherPost_ID_seq"'::regclass);
 
 
 --
--- Name: SubjectLessonType ID; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: SubjectLessonType ID; Type: DEFAULT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."SubjectLessonType" ALTER COLUMN "ID" SET DEFAULT nextval('public."SubjectLessonType_ID_seq"'::regclass);
 
 
 --
--- Name: SubjectLessonTypeTeacherPost ID; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: SubjectLessonTypeTeacherPost ID; Type: DEFAULT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."SubjectLessonTypeTeacherPost" ALTER COLUMN "ID" SET DEFAULT nextval('public."SubjectLessonTypeTeacherPost_ID_seq"'::regclass);
 
 
 --
--- Name: Teacher ID; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: Teacher ID; Type: DEFAULT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."Teacher" ALTER COLUMN "ID" SET DEFAULT nextval('public."Teacher_ID_seq"'::regclass);
 
 
 --
--- Name: TeacherPost ID; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: TeacherPost ID; Type: DEFAULT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."TeacherPost" ALTER COLUMN "ID" SET DEFAULT nextval('public."TeacherPost_ID_seq"'::regclass);
 
 
 --
--- Name: Time ID; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: Time ID; Type: DEFAULT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."Time" ALTER COLUMN "ID" SET DEFAULT nextval('public."Time_ID_seq"'::regclass);
 
 
 --
--- Name: Week ID; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: Week ID; Type: DEFAULT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."Week" ALTER COLUMN "ID" SET DEFAULT nextval('public."Week_ID_seq"'::regclass);
 
 
 --
--- Name: Worker ID; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: Worker ID; Type: DEFAULT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."Worker" ALTER COLUMN "ID" SET DEFAULT nextval('public."Worker_ID_seq"'::regclass);
 
 
 --
--- Data for Name: Audience; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: Audience; Type: TABLE DATA; Schema: public; Owner: admin
 --
 
 COPY public."Audience" ("ID", "Name", "NumberOfSeats", "NumberOfComputers") FROM stdin;
@@ -1432,7 +1432,7 @@ COPY public."Audience" ("ID", "Name", "NumberOfSeats", "NumberOfComputers") FROM
 
 
 --
--- Data for Name: AudienceCalendar; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: AudienceCalendar; Type: TABLE DATA; Schema: public; Owner: admin
 --
 
 COPY public."AudienceCalendar" ("AudienceID", "CalendarID") FROM stdin;
@@ -1440,14 +1440,7 @@ COPY public."AudienceCalendar" ("AudienceID", "CalendarID") FROM stdin;
 
 
 --
--- Name: Audience_ID_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public."Audience_ID_seq"', 1, false);
-
-
---
--- Data for Name: Calendar; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: Calendar; Type: TABLE DATA; Schema: public; Owner: admin
 --
 
 COPY public."Calendar" ("ID", "Name", "Link", "Colour") FROM stdin;
@@ -1455,14 +1448,7 @@ COPY public."Calendar" ("ID", "Name", "Link", "Colour") FROM stdin;
 
 
 --
--- Name: Calendar_ID_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public."Calendar_ID_seq"', 1, false);
-
-
---
--- Data for Name: Chair; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: Chair; Type: TABLE DATA; Schema: public; Owner: admin
 --
 
 COPY public."Chair" ("ID", "Name", "FacultyID") FROM stdin;
@@ -1470,14 +1456,7 @@ COPY public."Chair" ("ID", "Name", "FacultyID") FROM stdin;
 
 
 --
--- Name: Chair_ID_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public."Chair_ID_seq"', 1, false);
-
-
---
--- Data for Name: Checkpoint; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: Checkpoint; Type: TABLE DATA; Schema: public; Owner: admin
 --
 
 COPY public."Checkpoint" ("ID", "Name", "UsableForLesson", "UsableForSubject", "UsableForTeachers") FROM stdin;
@@ -1485,14 +1464,7 @@ COPY public."Checkpoint" ("ID", "Name", "UsableForLesson", "UsableForSubject", "
 
 
 --
--- Name: Checkpoint_ID_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public."Checkpoint_ID_seq"', 1, false);
-
-
---
--- Data for Name: ControlForm; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: ControlForm; Type: TABLE DATA; Schema: public; Owner: admin
 --
 
 COPY public."ControlForm" ("ID", "Name") FROM stdin;
@@ -1500,14 +1472,7 @@ COPY public."ControlForm" ("ID", "Name") FROM stdin;
 
 
 --
--- Name: ControlForm_ID_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public."ControlForm_ID_seq"', 1, false);
-
-
---
--- Data for Name: Cource; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: Cource; Type: TABLE DATA; Schema: public; Owner: admin
 --
 
 COPY public."Cource" ("ID", "Name") FROM stdin;
@@ -1515,14 +1480,7 @@ COPY public."Cource" ("ID", "Name") FROM stdin;
 
 
 --
--- Name: Cource_ID_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public."Cource_ID_seq"', 1, false);
-
-
---
--- Data for Name: Day; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: Day; Type: TABLE DATA; Schema: public; Owner: admin
 --
 
 COPY public."Day" ("ID", "Name", "ShortName") FROM stdin;
@@ -1530,14 +1488,7 @@ COPY public."Day" ("ID", "Name", "ShortName") FROM stdin;
 
 
 --
--- Name: Day_ID_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public."Day_ID_seq"', 1, false);
-
-
---
--- Data for Name: Faculty; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: Faculty; Type: TABLE DATA; Schema: public; Owner: admin
 --
 
 COPY public."Faculty" ("ID", "Name") FROM stdin;
@@ -1545,14 +1496,7 @@ COPY public."Faculty" ("ID", "Name") FROM stdin;
 
 
 --
--- Name: Faculty_ID_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public."Faculty_ID_seq"', 1, false);
-
-
---
--- Data for Name: Flow; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: Flow; Type: TABLE DATA; Schema: public; Owner: admin
 --
 
 COPY public."Flow" ("ID", "Comment") FROM stdin;
@@ -1560,14 +1504,7 @@ COPY public."Flow" ("ID", "Comment") FROM stdin;
 
 
 --
--- Name: Flow_ID_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public."Flow_ID_seq"', 1, false);
-
-
---
--- Data for Name: Group; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: Group; Type: TABLE DATA; Schema: public; Owner: admin
 --
 
 COPY public."Group" ("ID", "LevelID", "CourceID", "SpecialityID", "Number") FROM stdin;
@@ -1575,7 +1512,7 @@ COPY public."Group" ("ID", "LevelID", "CourceID", "SpecialityID", "Number") FROM
 
 
 --
--- Data for Name: GroupCalendar; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: GroupCalendar; Type: TABLE DATA; Schema: public; Owner: admin
 --
 
 COPY public."GroupCalendar" ("GroupID", "CalendarID") FROM stdin;
@@ -1583,14 +1520,7 @@ COPY public."GroupCalendar" ("GroupID", "CalendarID") FROM stdin;
 
 
 --
--- Name: Group_ID_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public."Group_ID_seq"', 1, false);
-
-
---
--- Data for Name: Lesson; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: Lesson; Type: TABLE DATA; Schema: public; Owner: admin
 --
 
 COPY public."Lesson" ("ID", "AudienceID", "FlowID", "SubjectLessonTypeTeacherPostID", "TimeID") FROM stdin;
@@ -1598,7 +1528,7 @@ COPY public."Lesson" ("ID", "AudienceID", "FlowID", "SubjectLessonTypeTeacherPos
 
 
 --
--- Data for Name: LessonCheckpoint; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: LessonCheckpoint; Type: TABLE DATA; Schema: public; Owner: admin
 --
 
 COPY public."LessonCheckpoint" ("LessonID", "CheckpointID", "Note") FROM stdin;
@@ -1606,7 +1536,7 @@ COPY public."LessonCheckpoint" ("LessonID", "CheckpointID", "Note") FROM stdin;
 
 
 --
--- Data for Name: LessonType; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: LessonType; Type: TABLE DATA; Schema: public; Owner: admin
 --
 
 COPY public."LessonType" ("ID", "Name", "ShortName") FROM stdin;
@@ -1614,21 +1544,7 @@ COPY public."LessonType" ("ID", "Name", "ShortName") FROM stdin;
 
 
 --
--- Name: LessonType_ID_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public."LessonType_ID_seq"', 1, false);
-
-
---
--- Name: Lesson_ID_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public."Lesson_ID_seq"', 1, false);
-
-
---
--- Data for Name: Level; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: Level; Type: TABLE DATA; Schema: public; Owner: admin
 --
 
 COPY public."Level" ("ID", "Name") FROM stdin;
@@ -1636,14 +1552,7 @@ COPY public."Level" ("ID", "Name") FROM stdin;
 
 
 --
--- Name: Level_ID_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public."Level_ID_seq"', 1, false);
-
-
---
--- Data for Name: Number; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: Number; Type: TABLE DATA; Schema: public; Owner: admin
 --
 
 COPY public."Number" ("ID", "Number", "TimeBegin", "TimeEnd") FROM stdin;
@@ -1651,14 +1560,7 @@ COPY public."Number" ("ID", "Number", "TimeBegin", "TimeEnd") FROM stdin;
 
 
 --
--- Name: Number_ID_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public."Number_ID_seq"', 1, false);
-
-
---
--- Data for Name: Permision; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: Permision; Type: TABLE DATA; Schema: public; Owner: admin
 --
 
 COPY public."Permision" ("ID", "Name") FROM stdin;
@@ -1666,14 +1568,7 @@ COPY public."Permision" ("ID", "Name") FROM stdin;
 
 
 --
--- Name: Permision_ID_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public."Permision_ID_seq"', 1, false);
-
-
---
--- Data for Name: Post; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: Post; Type: TABLE DATA; Schema: public; Owner: admin
 --
 
 COPY public."Post" ("ID", "Name", "ShortName") FROM stdin;
@@ -1681,14 +1576,7 @@ COPY public."Post" ("ID", "Name", "ShortName") FROM stdin;
 
 
 --
--- Name: Post_ID_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public."Post_ID_seq"', 1, false);
-
-
---
--- Data for Name: Shedule; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: Shedule; Type: TABLE DATA; Schema: public; Owner: admin
 --
 
 COPY public."Shedule" ("ID", "Name", "UsesFrom", "UsesTo") FROM stdin;
@@ -1696,7 +1584,7 @@ COPY public."Shedule" ("ID", "Name", "UsesFrom", "UsesTo") FROM stdin;
 
 
 --
--- Data for Name: SheduleLesson; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: SheduleLesson; Type: TABLE DATA; Schema: public; Owner: admin
 --
 
 COPY public."SheduleLesson" ("LessonID", "SheduleID") FROM stdin;
@@ -1704,7 +1592,7 @@ COPY public."SheduleLesson" ("LessonID", "SheduleID") FROM stdin;
 
 
 --
--- Data for Name: SheduleWorkerPermision; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: SheduleWorkerPermision; Type: TABLE DATA; Schema: public; Owner: admin
 --
 
 COPY public."SheduleWorkerPermision" ("SheduleID", "WorkerID", "PermisionID") FROM stdin;
@@ -1712,28 +1600,7 @@ COPY public."SheduleWorkerPermision" ("SheduleID", "WorkerID", "PermisionID") FR
 
 
 --
--- Name: SheduleWorkerPermision_PermisionID_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public."SheduleWorkerPermision_PermisionID_seq"', 1, false);
-
-
---
--- Name: SheduleWorkerPermision_WorkerID_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public."SheduleWorkerPermision_WorkerID_seq"', 1, false);
-
-
---
--- Name: Shedule_ID_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public."Shedule_ID_seq"', 1, false);
-
-
---
--- Data for Name: Speciality; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: Speciality; Type: TABLE DATA; Schema: public; Owner: admin
 --
 
 COPY public."Speciality" ("ID", "Name") FROM stdin;
@@ -1741,14 +1608,7 @@ COPY public."Speciality" ("ID", "Name") FROM stdin;
 
 
 --
--- Name: Speciality_ID_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public."Speciality_ID_seq"', 1, false);
-
-
---
--- Data for Name: Specialization; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: Specialization; Type: TABLE DATA; Schema: public; Owner: admin
 --
 
 COPY public."Specialization" ("ID", "Name") FROM stdin;
@@ -1756,14 +1616,7 @@ COPY public."Specialization" ("ID", "Name") FROM stdin;
 
 
 --
--- Name: Specialization_ID_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public."Specialization_ID_seq"', 1, false);
-
-
---
--- Data for Name: Subgroup; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: Subgroup; Type: TABLE DATA; Schema: public; Owner: admin
 --
 
 COPY public."Subgroup" ("ID", "GroupID", "SpecializationID", "StudentCount") FROM stdin;
@@ -1771,7 +1624,7 @@ COPY public."Subgroup" ("ID", "GroupID", "SpecializationID", "StudentCount") FRO
 
 
 --
--- Data for Name: SubgroupFlow; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: SubgroupFlow; Type: TABLE DATA; Schema: public; Owner: admin
 --
 
 COPY public."SubgroupFlow" ("SubgroupID", "FlowID") FROM stdin;
@@ -1779,14 +1632,7 @@ COPY public."SubgroupFlow" ("SubgroupID", "FlowID") FROM stdin;
 
 
 --
--- Name: Subgroup_ID_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public."Subgroup_ID_seq"', 1, false);
-
-
---
--- Data for Name: Subject; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: Subject; Type: TABLE DATA; Schema: public; Owner: admin
 --
 
 COPY public."Subject" ("ID", "Name") FROM stdin;
@@ -1794,7 +1640,7 @@ COPY public."Subject" ("ID", "Name") FROM stdin;
 
 
 --
--- Data for Name: SubjectControlForm; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: SubjectControlForm; Type: TABLE DATA; Schema: public; Owner: admin
 --
 
 COPY public."SubjectControlForm" ("ID", "SubjectID", "ControlFormID") FROM stdin;
@@ -1802,7 +1648,7 @@ COPY public."SubjectControlForm" ("ID", "SubjectID", "ControlFormID") FROM stdin
 
 
 --
--- Data for Name: SubjectControlFormTeacherPost; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: SubjectControlFormTeacherPost; Type: TABLE DATA; Schema: public; Owner: admin
 --
 
 COPY public."SubjectControlFormTeacherPost" ("ID", "SubjectControlFormID", "TeacherPostID") FROM stdin;
@@ -1810,21 +1656,7 @@ COPY public."SubjectControlFormTeacherPost" ("ID", "SubjectControlFormID", "Teac
 
 
 --
--- Name: SubjectControlFormTeacherPost_ID_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public."SubjectControlFormTeacherPost_ID_seq"', 1, false);
-
-
---
--- Name: SubjectControlForm_ID_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public."SubjectControlForm_ID_seq"', 1, false);
-
-
---
--- Data for Name: SubjectLessonType; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: SubjectLessonType; Type: TABLE DATA; Schema: public; Owner: admin
 --
 
 COPY public."SubjectLessonType" ("ID", "SubjectID", "LessonTypeID") FROM stdin;
@@ -1832,7 +1664,7 @@ COPY public."SubjectLessonType" ("ID", "SubjectID", "LessonTypeID") FROM stdin;
 
 
 --
--- Data for Name: SubjectLessonTypeTeacherPost; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: SubjectLessonTypeTeacherPost; Type: TABLE DATA; Schema: public; Owner: admin
 --
 
 COPY public."SubjectLessonTypeTeacherPost" ("ID", "SubjectLessonTypeID", "TeacherPostID") FROM stdin;
@@ -1840,28 +1672,7 @@ COPY public."SubjectLessonTypeTeacherPost" ("ID", "SubjectLessonTypeID", "Teache
 
 
 --
--- Name: SubjectLessonTypeTeacherPost_ID_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public."SubjectLessonTypeTeacherPost_ID_seq"', 1, false);
-
-
---
--- Name: SubjectLessonType_ID_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public."SubjectLessonType_ID_seq"', 1, false);
-
-
---
--- Name: Subject_ID_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public."Subject_ID_seq"', 1, false);
-
-
---
--- Data for Name: Teacher; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: Teacher; Type: TABLE DATA; Schema: public; Owner: admin
 --
 
 COPY public."Teacher" ("ID", "Surname", "Name", "Patronym") FROM stdin;
@@ -1869,7 +1680,7 @@ COPY public."Teacher" ("ID", "Surname", "Name", "Patronym") FROM stdin;
 
 
 --
--- Data for Name: TeacherChair; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: TeacherChair; Type: TABLE DATA; Schema: public; Owner: admin
 --
 
 COPY public."TeacherChair" ("TeacherID", "ChairID") FROM stdin;
@@ -1877,7 +1688,7 @@ COPY public."TeacherChair" ("TeacherID", "ChairID") FROM stdin;
 
 
 --
--- Data for Name: TeacherPost; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: TeacherPost; Type: TABLE DATA; Schema: public; Owner: admin
 --
 
 COPY public."TeacherPost" ("ID", "TeacherID", "PostID") FROM stdin;
@@ -1885,21 +1696,7 @@ COPY public."TeacherPost" ("ID", "TeacherID", "PostID") FROM stdin;
 
 
 --
--- Name: TeacherPost_ID_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public."TeacherPost_ID_seq"', 1, false);
-
-
---
--- Name: Teacher_ID_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public."Teacher_ID_seq"', 1, false);
-
-
---
--- Data for Name: TecherCalendar; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: TecherCalendar; Type: TABLE DATA; Schema: public; Owner: admin
 --
 
 COPY public."TecherCalendar" ("TecherID", "CalendarID") FROM stdin;
@@ -1907,7 +1704,7 @@ COPY public."TecherCalendar" ("TecherID", "CalendarID") FROM stdin;
 
 
 --
--- Data for Name: Time; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: Time; Type: TABLE DATA; Schema: public; Owner: admin
 --
 
 COPY public."Time" ("ID", "WeekID", "DayID", "NumberID") FROM stdin;
@@ -1915,14 +1712,7 @@ COPY public."Time" ("ID", "WeekID", "DayID", "NumberID") FROM stdin;
 
 
 --
--- Name: Time_ID_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public."Time_ID_seq"', 1, false);
-
-
---
--- Data for Name: Week; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: Week; Type: TABLE DATA; Schema: public; Owner: admin
 --
 
 COPY public."Week" ("ID", "Name") FROM stdin;
@@ -1930,14 +1720,7 @@ COPY public."Week" ("ID", "Name") FROM stdin;
 
 
 --
--- Name: Week_ID_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public."Week_ID_seq"', 1, false);
-
-
---
--- Data for Name: Worker; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: Worker; Type: TABLE DATA; Schema: public; Owner: admin
 --
 
 COPY public."Worker" ("ID", "Surname", "Name", "Patronym", email, pw) FROM stdin;
@@ -1945,14 +1728,239 @@ COPY public."Worker" ("ID", "Surname", "Name", "Patronym", email, pw) FROM stdin
 
 
 --
--- Name: Worker_ID_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: Audience_ID_seq; Type: SEQUENCE SET; Schema: public; Owner: admin
+--
+
+SELECT pg_catalog.setval('public."Audience_ID_seq"', 1, false);
+
+
+--
+-- Name: Calendar_ID_seq; Type: SEQUENCE SET; Schema: public; Owner: admin
+--
+
+SELECT pg_catalog.setval('public."Calendar_ID_seq"', 1, false);
+
+
+--
+-- Name: Chair_ID_seq; Type: SEQUENCE SET; Schema: public; Owner: admin
+--
+
+SELECT pg_catalog.setval('public."Chair_ID_seq"', 1, false);
+
+
+--
+-- Name: Checkpoint_ID_seq; Type: SEQUENCE SET; Schema: public; Owner: admin
+--
+
+SELECT pg_catalog.setval('public."Checkpoint_ID_seq"', 1, false);
+
+
+--
+-- Name: ControlForm_ID_seq; Type: SEQUENCE SET; Schema: public; Owner: admin
+--
+
+SELECT pg_catalog.setval('public."ControlForm_ID_seq"', 1, false);
+
+
+--
+-- Name: Cource_ID_seq; Type: SEQUENCE SET; Schema: public; Owner: admin
+--
+
+SELECT pg_catalog.setval('public."Cource_ID_seq"', 1, false);
+
+
+--
+-- Name: Day_ID_seq; Type: SEQUENCE SET; Schema: public; Owner: admin
+--
+
+SELECT pg_catalog.setval('public."Day_ID_seq"', 1, false);
+
+
+--
+-- Name: Faculty_ID_seq; Type: SEQUENCE SET; Schema: public; Owner: admin
+--
+
+SELECT pg_catalog.setval('public."Faculty_ID_seq"', 1, false);
+
+
+--
+-- Name: Flow_ID_seq; Type: SEQUENCE SET; Schema: public; Owner: admin
+--
+
+SELECT pg_catalog.setval('public."Flow_ID_seq"', 1, false);
+
+
+--
+-- Name: Group_ID_seq; Type: SEQUENCE SET; Schema: public; Owner: admin
+--
+
+SELECT pg_catalog.setval('public."Group_ID_seq"', 1, false);
+
+
+--
+-- Name: LessonType_ID_seq; Type: SEQUENCE SET; Schema: public; Owner: admin
+--
+
+SELECT pg_catalog.setval('public."LessonType_ID_seq"', 1, false);
+
+
+--
+-- Name: Lesson_ID_seq; Type: SEQUENCE SET; Schema: public; Owner: admin
+--
+
+SELECT pg_catalog.setval('public."Lesson_ID_seq"', 1, false);
+
+
+--
+-- Name: Level_ID_seq; Type: SEQUENCE SET; Schema: public; Owner: admin
+--
+
+SELECT pg_catalog.setval('public."Level_ID_seq"', 1, false);
+
+
+--
+-- Name: Number_ID_seq; Type: SEQUENCE SET; Schema: public; Owner: admin
+--
+
+SELECT pg_catalog.setval('public."Number_ID_seq"', 1, false);
+
+
+--
+-- Name: Permision_ID_seq; Type: SEQUENCE SET; Schema: public; Owner: admin
+--
+
+SELECT pg_catalog.setval('public."Permision_ID_seq"', 1, false);
+
+
+--
+-- Name: Post_ID_seq; Type: SEQUENCE SET; Schema: public; Owner: admin
+--
+
+SELECT pg_catalog.setval('public."Post_ID_seq"', 1, false);
+
+
+--
+-- Name: SheduleWorkerPermision_PermisionID_seq; Type: SEQUENCE SET; Schema: public; Owner: admin
+--
+
+SELECT pg_catalog.setval('public."SheduleWorkerPermision_PermisionID_seq"', 1, false);
+
+
+--
+-- Name: SheduleWorkerPermision_WorkerID_seq; Type: SEQUENCE SET; Schema: public; Owner: admin
+--
+
+SELECT pg_catalog.setval('public."SheduleWorkerPermision_WorkerID_seq"', 1, false);
+
+
+--
+-- Name: Shedule_ID_seq; Type: SEQUENCE SET; Schema: public; Owner: admin
+--
+
+SELECT pg_catalog.setval('public."Shedule_ID_seq"', 1, false);
+
+
+--
+-- Name: Speciality_ID_seq; Type: SEQUENCE SET; Schema: public; Owner: admin
+--
+
+SELECT pg_catalog.setval('public."Speciality_ID_seq"', 1, false);
+
+
+--
+-- Name: Specialization_ID_seq; Type: SEQUENCE SET; Schema: public; Owner: admin
+--
+
+SELECT pg_catalog.setval('public."Specialization_ID_seq"', 1, false);
+
+
+--
+-- Name: Subgroup_ID_seq; Type: SEQUENCE SET; Schema: public; Owner: admin
+--
+
+SELECT pg_catalog.setval('public."Subgroup_ID_seq"', 1, false);
+
+
+--
+-- Name: SubjectControlFormTeacherPost_ID_seq; Type: SEQUENCE SET; Schema: public; Owner: admin
+--
+
+SELECT pg_catalog.setval('public."SubjectControlFormTeacherPost_ID_seq"', 1, false);
+
+
+--
+-- Name: SubjectControlForm_ID_seq; Type: SEQUENCE SET; Schema: public; Owner: admin
+--
+
+SELECT pg_catalog.setval('public."SubjectControlForm_ID_seq"', 1, false);
+
+
+--
+-- Name: SubjectLessonTypeTeacherPost_ID_seq; Type: SEQUENCE SET; Schema: public; Owner: admin
+--
+
+SELECT pg_catalog.setval('public."SubjectLessonTypeTeacherPost_ID_seq"', 1, false);
+
+
+--
+-- Name: SubjectLessonType_ID_seq; Type: SEQUENCE SET; Schema: public; Owner: admin
+--
+
+SELECT pg_catalog.setval('public."SubjectLessonType_ID_seq"', 1, false);
+
+
+--
+-- Name: Subject_ID_seq; Type: SEQUENCE SET; Schema: public; Owner: admin
+--
+
+SELECT pg_catalog.setval('public."Subject_ID_seq"', 1, false);
+
+
+--
+-- Name: TeacherPost_ID_seq; Type: SEQUENCE SET; Schema: public; Owner: admin
+--
+
+SELECT pg_catalog.setval('public."TeacherPost_ID_seq"', 1, false);
+
+
+--
+-- Name: Teacher_ID_seq; Type: SEQUENCE SET; Schema: public; Owner: admin
+--
+
+SELECT pg_catalog.setval('public."Teacher_ID_seq"', 1, false);
+
+
+--
+-- Name: Time_ID_seq; Type: SEQUENCE SET; Schema: public; Owner: admin
+--
+
+SELECT pg_catalog.setval('public."Time_ID_seq"', 1, false);
+
+
+--
+-- Name: Week_ID_seq; Type: SEQUENCE SET; Schema: public; Owner: admin
+--
+
+SELECT pg_catalog.setval('public."Week_ID_seq"', 1, false);
+
+
+--
+-- Name: Worker_ID_seq; Type: SEQUENCE SET; Schema: public; Owner: admin
 --
 
 SELECT pg_catalog.setval('public."Worker_ID_seq"', 1, false);
 
 
 --
--- Name: Audience audience_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: Chair Chair_ID_key; Type: CONSTRAINT; Schema: public; Owner: admin
+--
+
+ALTER TABLE ONLY public."Chair"
+    ADD CONSTRAINT "Chair_ID_key" UNIQUE ("ID");
+
+
+--
+-- Name: Audience audience_pk; Type: CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."Audience"
@@ -1960,7 +1968,7 @@ ALTER TABLE ONLY public."Audience"
 
 
 --
--- Name: AudienceCalendar audiencecalendar_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: AudienceCalendar audiencecalendar_pk; Type: CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."AudienceCalendar"
@@ -1968,7 +1976,7 @@ ALTER TABLE ONLY public."AudienceCalendar"
 
 
 --
--- Name: Calendar calendar_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: Calendar calendar_pk; Type: CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."Calendar"
@@ -1976,7 +1984,7 @@ ALTER TABLE ONLY public."Calendar"
 
 
 --
--- Name: Chair chair_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: Chair chair_pk; Type: CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."Chair"
@@ -1984,7 +1992,7 @@ ALTER TABLE ONLY public."Chair"
 
 
 --
--- Name: Checkpoint checkpoint_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: Checkpoint checkpoint_pk; Type: CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."Checkpoint"
@@ -1992,7 +2000,7 @@ ALTER TABLE ONLY public."Checkpoint"
 
 
 --
--- Name: ControlForm controlform_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: ControlForm controlform_pk; Type: CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."ControlForm"
@@ -2000,7 +2008,7 @@ ALTER TABLE ONLY public."ControlForm"
 
 
 --
--- Name: Cource cource_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: Cource cource_pk; Type: CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."Cource"
@@ -2008,7 +2016,7 @@ ALTER TABLE ONLY public."Cource"
 
 
 --
--- Name: Day day_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: Day day_pk; Type: CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."Day"
@@ -2016,7 +2024,7 @@ ALTER TABLE ONLY public."Day"
 
 
 --
--- Name: Faculty faculty_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: Faculty faculty_pk; Type: CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."Faculty"
@@ -2024,7 +2032,7 @@ ALTER TABLE ONLY public."Faculty"
 
 
 --
--- Name: Flow flow_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: Flow flow_pk; Type: CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."Flow"
@@ -2032,7 +2040,7 @@ ALTER TABLE ONLY public."Flow"
 
 
 --
--- Name: Group group_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: Group group_pk; Type: CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."Group"
@@ -2040,7 +2048,7 @@ ALTER TABLE ONLY public."Group"
 
 
 --
--- Name: GroupCalendar groupcalendar_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: GroupCalendar groupcalendar_pk; Type: CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."GroupCalendar"
@@ -2048,7 +2056,7 @@ ALTER TABLE ONLY public."GroupCalendar"
 
 
 --
--- Name: Lesson lesson_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: Lesson lesson_pk; Type: CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."Lesson"
@@ -2056,7 +2064,7 @@ ALTER TABLE ONLY public."Lesson"
 
 
 --
--- Name: LessonCheckpoint lessoncheckpoint_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: LessonCheckpoint lessoncheckpoint_pk; Type: CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."LessonCheckpoint"
@@ -2064,7 +2072,7 @@ ALTER TABLE ONLY public."LessonCheckpoint"
 
 
 --
--- Name: LessonType lessontype_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: LessonType lessontype_pk; Type: CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."LessonType"
@@ -2072,7 +2080,7 @@ ALTER TABLE ONLY public."LessonType"
 
 
 --
--- Name: Level level_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: Level level_pk; Type: CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."Level"
@@ -2080,7 +2088,7 @@ ALTER TABLE ONLY public."Level"
 
 
 --
--- Name: Number number_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: Number number_pk; Type: CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."Number"
@@ -2088,7 +2096,7 @@ ALTER TABLE ONLY public."Number"
 
 
 --
--- Name: Permision permision_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: Permision permision_pk; Type: CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."Permision"
@@ -2096,7 +2104,7 @@ ALTER TABLE ONLY public."Permision"
 
 
 --
--- Name: Post post_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: Post post_pk; Type: CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."Post"
@@ -2104,7 +2112,7 @@ ALTER TABLE ONLY public."Post"
 
 
 --
--- Name: Shedule shedule_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: Shedule shedule_pk; Type: CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."Shedule"
@@ -2112,7 +2120,7 @@ ALTER TABLE ONLY public."Shedule"
 
 
 --
--- Name: SheduleLesson shedulelesson_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: SheduleLesson shedulelesson_pk; Type: CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."SheduleLesson"
@@ -2120,7 +2128,7 @@ ALTER TABLE ONLY public."SheduleLesson"
 
 
 --
--- Name: SheduleWorkerPermision sheduleworkerpermision_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: SheduleWorkerPermision sheduleworkerpermision_pk; Type: CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."SheduleWorkerPermision"
@@ -2128,7 +2136,7 @@ ALTER TABLE ONLY public."SheduleWorkerPermision"
 
 
 --
--- Name: Speciality speciality_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: Speciality speciality_pk; Type: CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."Speciality"
@@ -2136,7 +2144,7 @@ ALTER TABLE ONLY public."Speciality"
 
 
 --
--- Name: Specialization specialization_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: Specialization specialization_pk; Type: CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."Specialization"
@@ -2144,7 +2152,7 @@ ALTER TABLE ONLY public."Specialization"
 
 
 --
--- Name: Subgroup subgroup_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: Subgroup subgroup_pk; Type: CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."Subgroup"
@@ -2152,7 +2160,7 @@ ALTER TABLE ONLY public."Subgroup"
 
 
 --
--- Name: SubgroupFlow subgroupflow_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: SubgroupFlow subgroupflow_pk; Type: CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."SubgroupFlow"
@@ -2160,7 +2168,7 @@ ALTER TABLE ONLY public."SubgroupFlow"
 
 
 --
--- Name: Subject subject_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: Subject subject_pk; Type: CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."Subject"
@@ -2168,7 +2176,7 @@ ALTER TABLE ONLY public."Subject"
 
 
 --
--- Name: SubjectControlForm subjectcontrolform_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: SubjectControlForm subjectcontrolform_pk; Type: CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."SubjectControlForm"
@@ -2176,7 +2184,7 @@ ALTER TABLE ONLY public."SubjectControlForm"
 
 
 --
--- Name: SubjectControlFormTeacherPost subjectcontrolformteacherpost_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: SubjectControlFormTeacherPost subjectcontrolformteacherpost_pk; Type: CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."SubjectControlFormTeacherPost"
@@ -2184,7 +2192,7 @@ ALTER TABLE ONLY public."SubjectControlFormTeacherPost"
 
 
 --
--- Name: SubjectLessonType subjectlessontype_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: SubjectLessonType subjectlessontype_pk; Type: CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."SubjectLessonType"
@@ -2192,7 +2200,7 @@ ALTER TABLE ONLY public."SubjectLessonType"
 
 
 --
--- Name: SubjectLessonTypeTeacherPost subjectlessontypeteacherpost_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: SubjectLessonTypeTeacherPost subjectlessontypeteacherpost_pk; Type: CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."SubjectLessonTypeTeacherPost"
@@ -2200,7 +2208,7 @@ ALTER TABLE ONLY public."SubjectLessonTypeTeacherPost"
 
 
 --
--- Name: Teacher teacher_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: Teacher teacher_pk; Type: CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."Teacher"
@@ -2208,7 +2216,7 @@ ALTER TABLE ONLY public."Teacher"
 
 
 --
--- Name: TeacherChair teacherchair_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: TeacherChair teacherchair_pk; Type: CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."TeacherChair"
@@ -2216,7 +2224,7 @@ ALTER TABLE ONLY public."TeacherChair"
 
 
 --
--- Name: TeacherPost teacherpost_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: TeacherPost teacherpost_pk; Type: CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."TeacherPost"
@@ -2224,7 +2232,7 @@ ALTER TABLE ONLY public."TeacherPost"
 
 
 --
--- Name: TecherCalendar techercalendar_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: TecherCalendar techercalendar_pk; Type: CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."TecherCalendar"
@@ -2232,7 +2240,7 @@ ALTER TABLE ONLY public."TecherCalendar"
 
 
 --
--- Name: Time time_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: Time time_pk; Type: CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."Time"
@@ -2240,7 +2248,7 @@ ALTER TABLE ONLY public."Time"
 
 
 --
--- Name: Week week_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: Week week_pk; Type: CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."Week"
@@ -2248,7 +2256,7 @@ ALTER TABLE ONLY public."Week"
 
 
 --
--- Name: Worker worker_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: Worker worker_pk; Type: CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."Worker"
@@ -2256,7 +2264,7 @@ ALTER TABLE ONLY public."Worker"
 
 
 --
--- Name: AudienceCalendar AudienceCalendar_fk0; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: AudienceCalendar AudienceCalendar_fk0; Type: FK CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."AudienceCalendar"
@@ -2264,7 +2272,7 @@ ALTER TABLE ONLY public."AudienceCalendar"
 
 
 --
--- Name: AudienceCalendar AudienceCalendar_fk1; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: AudienceCalendar AudienceCalendar_fk1; Type: FK CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."AudienceCalendar"
@@ -2272,7 +2280,7 @@ ALTER TABLE ONLY public."AudienceCalendar"
 
 
 --
--- Name: Chair Chair_fk0; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: Chair Chair_fk0; Type: FK CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."Chair"
@@ -2280,7 +2288,7 @@ ALTER TABLE ONLY public."Chair"
 
 
 --
--- Name: GroupCalendar GroupCalendar_fk0; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: GroupCalendar GroupCalendar_fk0; Type: FK CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."GroupCalendar"
@@ -2288,7 +2296,7 @@ ALTER TABLE ONLY public."GroupCalendar"
 
 
 --
--- Name: GroupCalendar GroupCalendar_fk1; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: GroupCalendar GroupCalendar_fk1; Type: FK CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."GroupCalendar"
@@ -2296,7 +2304,7 @@ ALTER TABLE ONLY public."GroupCalendar"
 
 
 --
--- Name: Group Group_fk0; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: Group Group_fk0; Type: FK CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."Group"
@@ -2304,7 +2312,7 @@ ALTER TABLE ONLY public."Group"
 
 
 --
--- Name: Group Group_fk1; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: Group Group_fk1; Type: FK CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."Group"
@@ -2312,7 +2320,7 @@ ALTER TABLE ONLY public."Group"
 
 
 --
--- Name: Group Group_fk2; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: Group Group_fk2; Type: FK CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."Group"
@@ -2320,7 +2328,7 @@ ALTER TABLE ONLY public."Group"
 
 
 --
--- Name: LessonCheckpoint LessonCheckpoint_fk0; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: LessonCheckpoint LessonCheckpoint_fk0; Type: FK CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."LessonCheckpoint"
@@ -2328,7 +2336,7 @@ ALTER TABLE ONLY public."LessonCheckpoint"
 
 
 --
--- Name: LessonCheckpoint LessonCheckpoint_fk1; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: LessonCheckpoint LessonCheckpoint_fk1; Type: FK CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."LessonCheckpoint"
@@ -2336,7 +2344,7 @@ ALTER TABLE ONLY public."LessonCheckpoint"
 
 
 --
--- Name: Lesson Lesson_fk0; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: Lesson Lesson_fk0; Type: FK CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."Lesson"
@@ -2344,7 +2352,7 @@ ALTER TABLE ONLY public."Lesson"
 
 
 --
--- Name: Lesson Lesson_fk1; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: Lesson Lesson_fk1; Type: FK CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."Lesson"
@@ -2352,7 +2360,7 @@ ALTER TABLE ONLY public."Lesson"
 
 
 --
--- Name: Lesson Lesson_fk2; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: Lesson Lesson_fk2; Type: FK CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."Lesson"
@@ -2360,7 +2368,7 @@ ALTER TABLE ONLY public."Lesson"
 
 
 --
--- Name: Lesson Lesson_fk3; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: Lesson Lesson_fk3; Type: FK CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."Lesson"
@@ -2368,7 +2376,7 @@ ALTER TABLE ONLY public."Lesson"
 
 
 --
--- Name: SheduleLesson SheduleLesson_fk0; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: SheduleLesson SheduleLesson_fk0; Type: FK CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."SheduleLesson"
@@ -2376,7 +2384,7 @@ ALTER TABLE ONLY public."SheduleLesson"
 
 
 --
--- Name: SheduleLesson SheduleLesson_fk1; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: SheduleLesson SheduleLesson_fk1; Type: FK CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."SheduleLesson"
@@ -2384,7 +2392,7 @@ ALTER TABLE ONLY public."SheduleLesson"
 
 
 --
--- Name: SheduleWorkerPermision SheduleWorkerPermision_fk0; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: SheduleWorkerPermision SheduleWorkerPermision_fk0; Type: FK CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."SheduleWorkerPermision"
@@ -2392,7 +2400,7 @@ ALTER TABLE ONLY public."SheduleWorkerPermision"
 
 
 --
--- Name: SheduleWorkerPermision SheduleWorkerPermision_fk1; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: SheduleWorkerPermision SheduleWorkerPermision_fk1; Type: FK CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."SheduleWorkerPermision"
@@ -2400,7 +2408,7 @@ ALTER TABLE ONLY public."SheduleWorkerPermision"
 
 
 --
--- Name: SheduleWorkerPermision SheduleWorkerPermision_fk2; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: SheduleWorkerPermision SheduleWorkerPermision_fk2; Type: FK CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."SheduleWorkerPermision"
@@ -2408,7 +2416,7 @@ ALTER TABLE ONLY public."SheduleWorkerPermision"
 
 
 --
--- Name: SubgroupFlow SubgroupFlow_fk0; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: SubgroupFlow SubgroupFlow_fk0; Type: FK CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."SubgroupFlow"
@@ -2416,7 +2424,7 @@ ALTER TABLE ONLY public."SubgroupFlow"
 
 
 --
--- Name: SubgroupFlow SubgroupFlow_fk1; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: SubgroupFlow SubgroupFlow_fk1; Type: FK CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."SubgroupFlow"
@@ -2424,7 +2432,7 @@ ALTER TABLE ONLY public."SubgroupFlow"
 
 
 --
--- Name: Subgroup Subgroup_fk0; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: Subgroup Subgroup_fk0; Type: FK CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."Subgroup"
@@ -2432,7 +2440,7 @@ ALTER TABLE ONLY public."Subgroup"
 
 
 --
--- Name: Subgroup Subgroup_fk1; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: Subgroup Subgroup_fk1; Type: FK CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."Subgroup"
@@ -2440,7 +2448,7 @@ ALTER TABLE ONLY public."Subgroup"
 
 
 --
--- Name: SubjectControlFormTeacherPost SubjectControlFormTeacherPost_fk0; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: SubjectControlFormTeacherPost SubjectControlFormTeacherPost_fk0; Type: FK CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."SubjectControlFormTeacherPost"
@@ -2448,7 +2456,7 @@ ALTER TABLE ONLY public."SubjectControlFormTeacherPost"
 
 
 --
--- Name: SubjectControlFormTeacherPost SubjectControlFormTeacherPost_fk1; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: SubjectControlFormTeacherPost SubjectControlFormTeacherPost_fk1; Type: FK CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."SubjectControlFormTeacherPost"
@@ -2456,7 +2464,7 @@ ALTER TABLE ONLY public."SubjectControlFormTeacherPost"
 
 
 --
--- Name: SubjectControlForm SubjectControlForm_fk0; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: SubjectControlForm SubjectControlForm_fk0; Type: FK CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."SubjectControlForm"
@@ -2464,7 +2472,7 @@ ALTER TABLE ONLY public."SubjectControlForm"
 
 
 --
--- Name: SubjectControlForm SubjectControlForm_fk1; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: SubjectControlForm SubjectControlForm_fk1; Type: FK CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."SubjectControlForm"
@@ -2472,7 +2480,7 @@ ALTER TABLE ONLY public."SubjectControlForm"
 
 
 --
--- Name: SubjectLessonTypeTeacherPost SubjectLessonTypeTeacherPost_fk0; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: SubjectLessonTypeTeacherPost SubjectLessonTypeTeacherPost_fk0; Type: FK CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."SubjectLessonTypeTeacherPost"
@@ -2480,7 +2488,7 @@ ALTER TABLE ONLY public."SubjectLessonTypeTeacherPost"
 
 
 --
--- Name: SubjectLessonTypeTeacherPost SubjectLessonTypeTeacherPost_fk1; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: SubjectLessonTypeTeacherPost SubjectLessonTypeTeacherPost_fk1; Type: FK CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."SubjectLessonTypeTeacherPost"
@@ -2488,7 +2496,7 @@ ALTER TABLE ONLY public."SubjectLessonTypeTeacherPost"
 
 
 --
--- Name: SubjectLessonType SubjectLessonType_fk0; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: SubjectLessonType SubjectLessonType_fk0; Type: FK CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."SubjectLessonType"
@@ -2496,7 +2504,7 @@ ALTER TABLE ONLY public."SubjectLessonType"
 
 
 --
--- Name: SubjectLessonType SubjectLessonType_fk1; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: SubjectLessonType SubjectLessonType_fk1; Type: FK CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."SubjectLessonType"
@@ -2504,7 +2512,7 @@ ALTER TABLE ONLY public."SubjectLessonType"
 
 
 --
--- Name: TeacherChair TeacherChair_fk0; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: TeacherChair TeacherChair_fk0; Type: FK CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."TeacherChair"
@@ -2512,7 +2520,15 @@ ALTER TABLE ONLY public."TeacherChair"
 
 
 --
--- Name: TeacherPost TeacherPost_fk0; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: TeacherChair TeacherChair_fk1; Type: FK CONSTRAINT; Schema: public; Owner: admin
+--
+
+ALTER TABLE ONLY public."TeacherChair"
+    ADD CONSTRAINT "TeacherChair_fk1" FOREIGN KEY ("ChairID") REFERENCES public."Chair"("ID");
+
+
+--
+-- Name: TeacherPost TeacherPost_fk0; Type: FK CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."TeacherPost"
@@ -2520,7 +2536,7 @@ ALTER TABLE ONLY public."TeacherPost"
 
 
 --
--- Name: TeacherPost TeacherPost_fk1; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: TeacherPost TeacherPost_fk1; Type: FK CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."TeacherPost"
@@ -2528,7 +2544,7 @@ ALTER TABLE ONLY public."TeacherPost"
 
 
 --
--- Name: TecherCalendar TecherCalendar_fk0; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: TecherCalendar TecherCalendar_fk0; Type: FK CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."TecherCalendar"
@@ -2536,7 +2552,7 @@ ALTER TABLE ONLY public."TecherCalendar"
 
 
 --
--- Name: TecherCalendar TecherCalendar_fk1; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: TecherCalendar TecherCalendar_fk1; Type: FK CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."TecherCalendar"
@@ -2544,7 +2560,7 @@ ALTER TABLE ONLY public."TecherCalendar"
 
 
 --
--- Name: Time Time_fk0; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: Time Time_fk0; Type: FK CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."Time"
@@ -2552,7 +2568,7 @@ ALTER TABLE ONLY public."Time"
 
 
 --
--- Name: Time Time_fk1; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: Time Time_fk1; Type: FK CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."Time"
@@ -2560,7 +2576,7 @@ ALTER TABLE ONLY public."Time"
 
 
 --
--- Name: Time Time_fk2; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: Time Time_fk2; Type: FK CONSTRAINT; Schema: public; Owner: admin
 --
 
 ALTER TABLE ONLY public."Time"
