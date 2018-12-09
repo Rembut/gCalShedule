@@ -1,0 +1,25 @@
+{
+  "name": "gcalshedule",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sen-den/gCalShedule.git"
+  },
+  "author": "Rembut",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sen-den/gCalShedule/issues"
+  },
+  "homepage": "https://github.com/sen-den/gCalShedule#readme",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "md5": "^2.2.1",
+    "xlsx": "^0.14.1"
+  },
+  "devDependencies": {},
+  "description": ""
+}
