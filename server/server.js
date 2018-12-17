@@ -23,15 +23,15 @@ const Day = db.day;
 
 const LessonNumber = db.lessonNumber;
 
-/*db.sequelize.sync({force: true}).then(() => {
+db.sequelize.sync({force: true}).then(() => {
   console.log('DROP DB { force: true }');
   initial();
-});*/
+});
 
-db.sequelize.sync().then(() => {
+/*db.sequelize.sync().then(() => {
   console.log('YEP');
   //initial();
-});
+});*/
  
 var server = app.listen(3000, function () {
  
@@ -43,15 +43,15 @@ var server = app.listen(3000, function () {
 
 function initial(){
   // Role
-	Role.create({
-		id: 1,
-		name: "USER"
-	});
-	
-	Role.create({
-		id: 2,
-		name: "ADMIN"
-	});
+  Role.create({
+    id: 1,
+    name: "USER"
+  });
+  
+  Role.create({
+    id: 2,
+    name: "ADMIN"
+  });
 
   // Post
   Post.create({
@@ -199,9 +199,17 @@ function initial(){
     timeEnd: "18:00:00"
   });
 
-  // Week !!!
-}
+  // Week 
+  Week.create({
+    number: 1,
+    letter: "а"
+  });
 
+  Week.create({
+    number: 2,
+    letter: "б"
+  });
+}
 
 
 

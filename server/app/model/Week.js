@@ -10,9 +10,6 @@ module.exports = (sequelize, Sequelize) => {
     },
     letter: {
       type: Sequelize.STRING
-    },
-    year: {
-      type: Sequelize.STRING
     }
   });
   
