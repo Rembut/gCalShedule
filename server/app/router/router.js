@@ -29,12 +29,16 @@ module.exports = function(app) {
 
   const weeks = require('../controller/weeks.js');
  
+  // sign in 
 	app.post('/api/auth/signup', [authJwt.verifyToken, authJwt.isAdmin, verifySignUp.checkDuplicateUserNameOrEmail, verifySignUp.checkRolesExisted], auth.signup);
 	
+  // sign up
 	app.post('/api/auth/signin', auth.signin);
 	
+  // user data
 	app.get('/api/user', [authJwt.verifyToken], user.userContent);
 	
+  // admin data
 	app.get('/api/admin', [authJwt.verifyToken, authJwt.isAdmin], admin.adminBoard);
 
 
