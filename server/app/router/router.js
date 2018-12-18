@@ -14,6 +14,20 @@ module.exports = function(app) {
   const faculties = require('../controller/faculties.js');
 
   const schedules = require('../controller/schedules.js');
+
+  const courses = require('../controller/courses.js');
+
+  const days = require('../controller/days.js');
+
+  const lessonNumbers = require('../controller/lessonNumbers.js');
+
+  const levels = require('../controller/levels.js');
+
+  const posts = require('../controller/posts.js');
+
+  const subjectTypes = require('../controller/subjectTypes.js');
+
+  const weeks = require('../controller/weeks.js');
  
 	app.post('/api/auth/signup', [authJwt.verifyToken, authJwt.isAdmin, verifySignUp.checkDuplicateUserNameOrEmail, verifySignUp.checkRolesExisted], auth.signup);
 	
@@ -56,6 +70,32 @@ module.exports = function(app) {
   app.delete('/api/faculties/:id', [authJwt.verifyToken, authJwt.isAdmin], faculties.delete);
 
 
-  // get a single schedule by id
-  //app.get('/api/schedules/:id', schedules.findById);
+  // get all courses 
+  app.get('/api/courses', courses.findAll);
+
+  // get all days
+  app.get('/api/days', days.findAll);
+
+  // get all lesson numbers
+  app.get('/api/lessonNumbers', lessonNumbers.findAll);
+
+  // get all levels
+  app.get('/api/levels', levels.findAll);
+
+  // get all posts
+  app.get('/api/posts', posts.findAll);
+
+  // get all subject types
+  app.get('/api/subjectTypes', subjectTypes.findAll);  
+
+  // get all weeks
+  app.get('/api/weeks', weeks.findAll);  
 }
+
+
+
+
+
+
+
+
