@@ -9,10 +9,6 @@ module.exports = function(app) {
 
   const auth = require('../controller/auth.js');
 
-  const departments = require('../controller/departments.js');
-
-  const faculties = require('../controller/faculties.js');
-
   const schedules = require('../controller/schedules.js');
 
   const courses = require('../controller/courses.js');
@@ -40,39 +36,6 @@ module.exports = function(app) {
 	
   // admin data
 	app.get('/api/admin', [authJwt.verifyToken, authJwt.isAdmin], admin.adminBoard);
-
-
-  // create new department
-  app.post('/api/departments', [authJwt.verifyToken, authJwt.isAdmin], departments.create);
-
-  // get all department
-  app.get('/api/departments', departments.findAll);
-
-  // get a single department by id
-  app.get('/api/departments/:id', departments.findById);
-
-  // update a department by id
-  app.put('/api/departments/:id', [authJwt.verifyToken, authJwt.isAdmin], departments.update);
-
-  // delete a department by id
-  app.delete('/api/departments/:id', [authJwt.verifyToken, authJwt.isAdmin], departments.delete);
-
-
-  // create new faculty
-  app.post('/api/faculties', [authJwt.verifyToken, authJwt.isAdmin], faculties.create);
-
-  // get all faculties
-  app.get('/api/faculties', faculties.findAll);
-
-  // get a single faculty by id
-  app.get('/api/faculties/:id', faculties.findById);
-
-  // update a faculty by id
-  app.put('/api/faculties/:id', [authJwt.verifyToken, authJwt.isAdmin], faculties.update);
-
-  // delete a faculty by id
-  app.delete('/api/faculties/:id', [authJwt.verifyToken, authJwt.isAdmin], faculties.delete);
-
 
   // get all courses 
   app.get('/api/courses', courses.findAll);
