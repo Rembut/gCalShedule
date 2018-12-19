@@ -17,6 +17,9 @@ module.exports = (sequelize, Sequelize) => {
 	  },
 	  password: {
 		  type: Sequelize.STRING
+		},
+		facultyId: {
+		  type: Sequelize.INTEGER
 		}
 	}, {
     classMethods: {

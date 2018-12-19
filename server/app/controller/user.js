@@ -5,7 +5,7 @@ const Role = db.role;
 exports.userContent = (req, res) => {
   User.findOne({
     where: {id: req.userId},
-    attributes: ['name', 'surname', 'patronym', 'username', 'email'],
+    attributes: ['name', 'surname', 'patronym', 'username', 'email', 'facultyId'],
     include: [{
       model: Role,
       attributes: ['id', 'name'],
