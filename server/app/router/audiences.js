@@ -5,7 +5,7 @@ const audiences = require('../controller/audiences.js');
 
 module.exports = function(app) {
   // create new audience
-  app.post('/api/audiences', [authJwt.verifyToken], audiences.create);
+  app.post('/api/audiences', [authJwt.verifyToken, authJwt.isAdmin], audiences.create);
 
   // get all audiences
   app.get('/api/audiences', audiences.findAll);
@@ -14,10 +14,10 @@ module.exports = function(app) {
   app.get('/api/audiences/:id', audiences.findById);
 
   // update a audience by id
-  app.put('/api/audiences/:id', [authJwt.verifyToken], audiences.update);
+  app.put('/api/audiences/:id', [authJwt.verifyToken, authJwt.isAdmin], audiences.update);
 
   // delete a audience by id
-  app.delete('/api/audiences/:id', [authJwt.verifyToken], audiences.delete);
+  app.delete('/api/audiences/:id', [authJwt.verifyToken, authJwt.isAdmin], audiences.delete);
 
 };
 

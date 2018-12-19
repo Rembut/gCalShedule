@@ -5,7 +5,7 @@ const teachers = require('../controller/teachers.js');
 
 module.exports = function(app) {
   // create new teacher
-  app.post('/api/teachers', [authJwt.verifyToken], teachers.create);
+  app.post('/api/teachers', [authJwt.verifyToken, authJwt.isAdmin], teachers.create);
 
   // get all teachers
   app.get('/api/teachers', teachers.findAll);
@@ -14,9 +14,9 @@ module.exports = function(app) {
   app.get('/api/teachers/:id', teachers.findById);
 
   // update a teacher by id
-  app.put('/api/teachers/:id', [authJwt.verifyToken], teachers.update);
+  app.put('/api/teachers/:id', [authJwt.verifyToken, authJwt.isAdmin], teachers.update);
 
   // delete a teacher by id
-  app.delete('/api/teachers/:id', [authJwt.verifyToken], teachers.delete);
+  app.delete('/api/teachers/:id', [authJwt.verifyToken, authJwt.isAdmin], teachers.delete);
 
 };

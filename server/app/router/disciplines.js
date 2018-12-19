@@ -5,7 +5,7 @@ const disciplines = require('../controller/disciplines.js');
 
 module.exports = function(app) {
   // create new discipline
-  app.post('/api/disciplines', [authJwt.verifyToken], disciplines.create);
+  app.post('/api/disciplines', [authJwt.verifyToken, authJwt.isAdmin], disciplines.create);
 
   // get all disciplines
   app.get('/api/disciplines', disciplines.findAll);
@@ -14,9 +14,9 @@ module.exports = function(app) {
   app.get('/api/disciplines/:id', disciplines.findById);
 
   // update a discipline by id
-  app.put('/api/disciplines/:id', [authJwt.verifyToken], disciplines.update);
+  app.put('/api/disciplines/:id', [authJwt.verifyToken, authJwt.isAdmin], disciplines.update);
 
   // delete a discipline by id
-  app.delete('/api/disciplines/:id', [authJwt.verifyToken], disciplines.delete);
+  app.delete('/api/disciplines/:id', [authJwt.verifyToken, authJwt.isAdmin], disciplines.delete);
 
 };
