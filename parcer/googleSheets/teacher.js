@@ -7,7 +7,17 @@ const { google } = require('googleapis');
 const GoogleSheetID = '1-SSzl6GCkU77ivvYNF1oqg1K7hWM67sMFmu9-mYcMss';
 const SheetRange = 'Data!A1:D';
 
-getStaffFromGS(GoogleSheetID, SheetRange);
+getStaffFromGS(GoogleSheetID, SheetRange)
+    .then((rows) => {
+        if (rows.length) {
+            // Print columns C and D, which corresponds to indices 2 and 3.
+            rows.map((row) => {
+                console.log(`${row[2].trim()}, ${row[3]}`);
+            });
+        } else {
+            console.log('No data found.');
+        }
+    });
 
 
 /**
@@ -16,23 +26,17 @@ getStaffFromGS(GoogleSheetID, SheetRange);
      * @param range sheet range in A1 notation
      */
 function getStaffFromGS(sheet, range) {
-    fs.readFile('credentials.json', (err, content) => {
-        if (err) return console.log('Error loading client secret file:', err);
-        // Authorize a client with credentials, then call the Google Sheets API.
+    return new Promise((resolve, reject) => {
+        fs.readFile('credentials.json', (err, content) => {
+            if (err) return console.log('Error loading client secret file:', err);
+            // Authorize a client with credentials, then call the Google Sheets API.
 
-        auth.authorize(JSON.parse(content))
-            .then(getSheetData)
-            .then((rows) => {
-                if (rows.length) {
-                    // Print columns C and D, which corresponds to indices 2 and 3.
-                    rows.map((row) => {
-                        console.log(`${row[2].trim()}, ${row[3]}`);
-                    });
-                } else {
-                    console.log('No data found.');
-                }
-            });
-    });
+            auth.authorize(JSON.parse(content))
+                .then(getSheetData)
+                .then((rows) => resolve(rows));
+        });
+    })
+    
 
     /**
      * Gets the json GoogleSpreadsheets table representation:
