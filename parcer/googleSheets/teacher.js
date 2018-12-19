@@ -20,7 +20,18 @@ function getStaffFromGS(sheet, range) {
         if (err) return console.log('Error loading client secret file:', err);
         // Authorize a client with credentials, then call the Google Sheets API.
 
-        auth.authorize(JSON.parse(content), getSheetData);
+        auth.authorize(JSON.parse(content))
+            .then(getSheetData)
+            .then((rows) => {
+                if (rows.length) {
+                    // Print columns C and D, which corresponds to indices 2 and 3.
+                    rows.map((row) => {
+                        console.log(`${row[2].trim()}, ${row[3]}`);
+                    });
+                } else {
+                    console.log('No data found.');
+                }
+            });
     });
 
     /**
@@ -28,26 +39,21 @@ function getStaffFromGS(sheet, range) {
      * @param {google.auth.OAuth2} auth The authenticated Google OAuth client.
      */
     function getSheetData(auth) {
-        const sheets = google.sheets({ version: 'v4', auth });
-        sheets.spreadsheets.values.get({
-            spreadsheetId: sheet,
-            range: range,
-        }, (err, res) => {
-            if (err) return console.log('The API returned an error: ' + err);
-            // Each row is array of columns values
-            // Access by number notation (A == 0)
-            const rows = res.data.values;
-            // TODO: must return 'rows' instead console.log
-
-            if (rows.length) {
-                // Print columns C and D, which corresponds to indices 2 and 3.
-                rows.map((row) => {
-                    console.log(`${row[2].trim()}, ${row[3]}`);
-                });
-            } else {
-                console.log('No data found.');
-            }
-        });
+        return new Promise((resolve, reject) => {
+            const sheets = google.sheets({ version: 'v4', auth });
+            sheets.spreadsheets.values.get({
+                spreadsheetId: sheet,
+                range: range,
+            }, (err, res) => {
+                if (err) {
+                    reject(err);
+                } else {
+                    // Each row is array of columns values
+                    // Access by number notation (A == 0)
+                    const rows = res.data.values;
+                    resolve(rows);
+                }     
+            });
+        })
     }
-
 }
