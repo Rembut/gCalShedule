@@ -14,7 +14,7 @@ module.exports = function(app) {
   app.get('/api/specializations/:id', specializations.findById);
 
   // update a specialization by id
-  app.put('/api/specializations/:id', [authJwt.verifyToken, authJwt.isAdminauthJwt.verifyToken], specializations.update);
+  app.put('/api/specializations/:id', [authJwt.verifyToken, authJwt.isAdmin], specializations.update);
 
   // delete a specialization by id
   app.delete('/api/specializations/:id', [authJwt.verifyToken, authJwt.isAdmin], specializations.delete);
