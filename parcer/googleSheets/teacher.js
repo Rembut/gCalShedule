@@ -3,11 +3,11 @@ const auth = require('./auth');
 const readline = require('readline');
 const { google } = require('googleapis');
 
+const credentials = 'credentials.json';
+const sheetID = '1-SSzl6GCkU77ivvYNF1oqg1K7hWM67sMFmu9-mYcMss';
+const sheetRange = 'Data!A1:D';
 
-const GoogleSheetID = '1-SSzl6GCkU77ivvYNF1oqg1K7hWM67sMFmu9-mYcMss';
-const SheetRange = 'Data!A1:D';
-
-getStaffFromGS(GoogleSheetID, SheetRange)
+getStaffFromGS(credentials, sheetID, sheetRange)
     .then((rows) => {
         if (rows.length) {
             // Print columns C and D, which corresponds to indices 2 and 3.
@@ -15,25 +15,32 @@ getStaffFromGS(GoogleSheetID, SheetRange)
                 console.log(`${row[2].trim()}, ${row[3]}`);
             });
         } else {
-            console.log('No data found.');
+            console.error('No data found in range');
         }
+    })
+    .catch((err) => {
+        console.error(err)
     });
 
 
 /**
-     * Auth the application to call GoogleSpreadsheets and get json table representation:
-     * @param sheet GoogleSpreadsheet ID
-     * @param range sheet range in A1 notation
-     */
-function getStaffFromGS(sheet, range) {
+* Auth the application to call GoogleSpreadsheets and get json table representation:
+* @param {Object} credentials The authorization client credentials.
+* @param sheet GoogleSpreadsheet ID
+* @param range sheet range in A1 notation
+*/
+function getStaffFromGS(credentials, sheet, range) {
     return new Promise((resolve, reject) => {
-        fs.readFile('credentials.json', (err, content) => {
-            if (err) return console.log('Error loading client secret file:', err);
-            // Authorize a client with credentials, then call the Google Sheets API.
+        fs.readFile(credentials, (err, content) => {
+            if (err) {
+                reject(err);
+            }
 
+            // Authorize a client with credentials, then call the Google Sheets API.
             auth.authorize(JSON.parse(content))
                 .then(getSheetData)
-                .then((rows) => resolve(rows));
+                .then((rows) => resolve(rows))
+                .catch((err) => console.error(err));
         });
     })
     
