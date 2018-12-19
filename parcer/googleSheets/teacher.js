@@ -4,11 +4,10 @@ const readline = require('readline');
 const { google } = require('googleapis');
 
 
-// TODO: must be rewriteted in correct way
-const sheet1 = '1-SSzl6GCkU77ivvYNF1oqg1K7hWM67sMFmu9-mYcMss';
-const range1 = 'Data!A1:D';
+const GoogleSheetID = '1-SSzl6GCkU77ivvYNF1oqg1K7hWM67sMFmu9-mYcMss';
+const SheetRange = 'Data!A1:D';
 
-getStaffFromGS(sheet1, range1);
+getStaffFromGS(GoogleSheetID, SheetRange);
 
 
 /**
@@ -20,11 +19,7 @@ function getStaffFromGS(sheet, range) {
     fs.readFile('credentials.json', (err, content) => {
         if (err) return console.log('Error loading client secret file:', err);
         // Authorize a client with credentials, then call the Google Sheets API.
-        //auth.authorize(JSON.parse(content), getSheetData);
 
-        // look for best practice
-        getSheetData.s = sheet;
-        getSheetData.r = range;
         auth.authorize(JSON.parse(content), getSheetData);
     });
 
@@ -45,11 +40,9 @@ function getStaffFromGS(sheet, range) {
             // TODO: must return 'rows' instead console.log
 
             if (rows.length) {
-                // TODO: must be rewriteted in correct way
                 // Print columns C and D, which corresponds to indices 2 and 3.
                 rows.map((row) => {
-                    // TODO: some C column's values aren't stripped
-                    console.log(`${row[2]}, ${row[3]}`);
+                    console.log(`${row[2].trim()}, ${row[3]}`);
                 });
             } else {
                 console.log('No data found.');
