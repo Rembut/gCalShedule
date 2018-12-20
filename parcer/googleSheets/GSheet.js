@@ -1,26 +1,6 @@
 const fs = require('fs');
 const auth = require('./auth');
-const readline = require('readline');
 const { google } = require('googleapis');
-
-const credentials = 'credentials.json';
-const sheetID = '1-SSzl6GCkU77ivvYNF1oqg1K7hWM67sMFmu9-mYcMss';
-const sheetRange = 'Data!A1:D';
-
-getStaffFromGS(credentials, sheetID, sheetRange)
-    .then((rows) => {
-        if (rows.length) {
-            // Print columns C and D, which corresponds to indices 2 and 3.
-            rows.map((row) => {
-                console.log(`${row[2].trim()}, ${row[3]}`);
-            });
-        } else {
-            console.error('No data found in range');
-        }
-    })
-    .catch((err) => {
-        console.error(err)
-    });
 
 
 /**
@@ -29,7 +9,7 @@ getStaffFromGS(credentials, sheetID, sheetRange)
 * @param sheet GoogleSpreadsheet ID
 * @param range sheet range in A1 notation
 */
-function getStaffFromGS(credentials, sheet, range) {
+exports.getStaffFromGS = (credentials, sheet, range) => {
     return new Promise((resolve, reject) => {
         fs.readFile(credentials, (err, content) => {
             if (err) {
