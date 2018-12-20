@@ -1,6 +1,8 @@
+/.vs
+
 # private data
 token.json
-credentials_fcsfm.json
+credentials.json
 
 # useless date ex. loaded lists
 tmp
@@ -66,4 +68,3 @@ typings/
 
 # next.js build output
 .next
-credentials.json
