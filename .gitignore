@@ -68,3 +68,8 @@ typings/
 
 # next.js build output
 .next
+
+# tex compiling files
+*.pdf
+*.aux
+*.synctex.gz
