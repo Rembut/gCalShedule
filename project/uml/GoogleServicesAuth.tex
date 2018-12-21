@@ -16,9 +16,9 @@
 \begin{umlseqdiag}
 	\umlactor[no ddots, x=1]{User}
 	\umlboundary[no ddots, x=5]{App}
-	\umlboundary[no ddots, x=8]{oAuth2}
+	\umlcontrol[no ddots, x=8]{oAuth2}
 	\umldatabase[no ddots, x=11.5, fill=blue!20]{FileSystem}
-	\umlentity[no ddots, x=13.5]{AuthAPI}
+	\umlboundary[no ddots, x=13.5]{AuthAPI}
 	
 	\begin{umlcall}[op=Auth required action, type=synchron, return=Response, padding=3]{User}{App}
 		\begin{umlfragment}[type=Auth]
