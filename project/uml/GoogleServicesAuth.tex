@@ -21,31 +21,25 @@
 	\umlboundary[no ddots, x=13.5]{AuthAPI}
 	
 	\begin{umlcall}[op=Auth required action, type=synchron, return=Response, padding=3]{User}{App}
+	
 		\begin{umlfragment}[type=Auth]
-		
-			\begin{umlcall}[op=Read credentials, type=synchron, return=Credentials]{App}{FileSystem}
-			\end{umlcall}
-			\begin{umlcall}[op=Authorise, type=synchron, return=oAuth2]{App}{AuthAPI}
-			\end{umlcall}
+			\begin{umlcall}[op=Read credentials, type=synchron, return=Credentials]{App}{FileSystem}\end{umlcall}
+			\begin{umlcall}[op=Authorise, type=synchron, return=oAuth2]{App}{AuthAPI}\end{umlcall}
 			
 			\begin{umlfragment}[type=oAuth2, label=Error, fill=green!10]
 				\begin{umlcall}[op=Get new token, type=synchron, return=oAuth2]{App}{oAuth2}
-					\begin{umlcall}[op=Generate URL, type=synchron, return=URL]{oAuth2}{AuthAPI}
-					\end{umlcall}
+					\begin{umlcall}[op=Generate URL, type=synchron, return=URL]{oAuth2}{AuthAPI}\end{umlcall}
 					\begin{umlcall}[op=Prompt interface, type=synchron, return=Code]{oAuth2}{App}
-						\begin{umlcall}[op=Visit URL request, type=synchron, return=Code]{App}{User}
-						\end{umlcall}
+						\begin{umlcall}[op=Visit URL request, type=synchron, return=Code]{App}{User}\end{umlcall}
 						\begin{umlcall}[op=Write token, type=synchron]{App}{FileSystem}
-							\begin{umlcall}[op=Set credentials, type=synchron, return=]{oAuth2}{oAuth2}
-							\end{umlcall}
+							\begin{umlcall}[op=Set credentials, type=synchron, return=]{oAuth2}{oAuth2}\end{umlcall}
 						\end{umlcall}
 					\end{umlcall}
 				\end{umlcall}
 				
 				\umlfpart[OK]
 				\begin{umlcall}[op=Create, type=synchron, return=oAuth2]{App}{oAuth2}
-					\begin{umlcall}[op=Set credentials, type=synchron, return=]{oAuth2}{oAuth2}
-					\end{umlcall}
+					\begin{umlcall}[op=Set credentials, type=synchron, return=]{oAuth2}{oAuth2}\end{umlcall}
 				\end{umlcall}
 				
 			\end{umlfragment}
@@ -53,6 +47,7 @@
 		\end{umlfragment}
 		
 	\end{umlcall}
+	
 \end{umlseqdiag}
 \end{tikzpicture}
 \end{center}
