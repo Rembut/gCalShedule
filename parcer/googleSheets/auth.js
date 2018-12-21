@@ -14,8 +14,7 @@ const TOKEN_PATH = 'token.json';
 // Load client secrets from a local file.
 
 /**
- * Create an OAuth2 client with the given credentials, and then execute the
- * given callback function.
+ * Create an OAuth2 client with the given credentials.
  * @param {Object} credentials The authorization client credentials.
  */
 exports.authorize = (credentials) => {
@@ -44,8 +43,8 @@ exports.authorize = (credentials) => {
 
 
 /**
- * Get and store new token after prompting for user authorization, and then
- * execute the given callback with the authorized OAuth2 client.
+ * Get and store new token after prompting for user authorization.
+ * Return oAuth2Client
  * @param {google.auth.OAuth2} oAuth2Client The OAuth2 client to get token for.
  */
 exports.getNewToken = (oAuth2Client) => {
