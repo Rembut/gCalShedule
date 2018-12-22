@@ -18,25 +18,23 @@
 	\umlboundary[no ddots, x=5]{App}
 	\umldatabase[no ddots, x=14, fill=blue!20]{DB}
 	
-	\begin{umlcall}[op=post request, type=synchron, return=response, padding=3]{User}{App}
+	\begin{umlcall}[op=Post request, type=synchron, return=Response, padding=3]{User}{App}
 		\umlcreatecall[no ddots, x=8]{App}{JWT}
-		\begin{umlcall}[op=init, type=synchron, return=response]{App}{JWT}
-			\begin{umlcall}[op=verify JWT, type=synchron]{JWT}{JWT}\end{umlcall}
+		\begin{umlcall}[op=Init, type=synchron, return=Response]{App}{JWT}
+			\begin{umlcall}[op=Verify JWT, type=synchron]{JWT}{JWT}\end{umlcall}
 		\end{umlcall}
 		
 		\begin{umlfragment}[type=Main, label=OK]
 	
-			\begin{umlfragment}[type=create, fill=green!20]
-				\umlcreatecall[no ddots, x=11]{App}{Object}
-				\begin{umlcall}[op=init, type=synchron, return=object]{App}{Object}
-					\begin{umlcall}[op=insert query, type=synchron]{Object}{DB}\end{umlcall}
-						
-				\end{umlcall}	
-			\end{umlfragment}
+			\umlcreatecall[no ddots, x=11]{App}{Object}
+			\begin{umlcall}[op=Parameters, type=synchron, return=Object]{App}{Object}
+				\begin{umlcall}[op=Select query, type=synchron, return=Rows]{Object}{DB}\end{umlcall}
+					
+			\end{umlcall}	
 			
 			\umlfpart[Error]
 			
-			\begin{umlcall}[op=undo creation, type=synchron, return=error]{App}{Object}\end{umlcall}
+			\begin{umlcall}[op=Error, type=synchron]{App}{App}\end{umlcall}
 		
 		\end{umlfragment}
 	\end{umlcall}
