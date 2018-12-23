@@ -1,6 +1,8 @@
+/.vs
+
 # private data
 token.json
-credentials_fcsfm.json
+credentials.json
 
 # useless date ex. loaded lists
 tmp
@@ -66,7 +68,12 @@ typings/
 
 # next.js build output
 .next
-credentials.json
+
+# tex compiling files
+*.pdf
+*.aux
+*.synctex.gz
+*.bak
 
 # visual studio path
 /.vs
