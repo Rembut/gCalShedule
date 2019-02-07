@@ -123,16 +123,19 @@
 
 % Пользовательские функции
 \usepackage{flafter} % рисунко появится не раньше первой ссылки на него
+\renewcommand{\floatpagefraction}{.8}
+\renewcommand{\topfraction}{.8}
+\renewcommand{\bottomfraction}{.4}
 
 \newcommand{\addimg}[4]{ % Добавление одного рисунка
-    \begin{figure}
+    \begin{figure}[tb]
         \centering
         \includegraphics[width=#2\linewidth]{#1}
         \caption{#3} \label{#4}
     \end{figure}
 }
 \newcommand{\addCodeAsImg}[3]{ % Добавление tikz рисунка
-    \begin{figure}[htb]
+    \begin{figure}[tb]
         \centering
         {#1}
         \caption{#2} \label{#3}
