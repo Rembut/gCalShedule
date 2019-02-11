@@ -27,7 +27,7 @@
 \usepackage[autostyle]{csquotes} % Стиль кавычек
 \DeclareQuoteAlias{russian}{ukrainian} % csquotes не знает об украинском языке. Примем, что кавычки аналогичные русскому
 
-\usepackage[backend=biber, babel=hyphen, style=numeric-comp]{biblatex} % Библиография
+\usepackage[backend=biber, babel=hyphen, bibstyle=gost-standard, style=numeric-comp]{biblatex} % Библиография
 
 \usepackage{amssymb,amsfonts,amsmath} % Математика
 \usepackage{tikz-uml} %  UML диаграммы
@@ -123,16 +123,19 @@
 
 % Пользовательские функции
 \usepackage{flafter} % рисунко появится не раньше первой ссылки на него
+\renewcommand{\floatpagefraction}{.8}
+\renewcommand{\topfraction}{.8}
+\renewcommand{\bottomfraction}{.4}
 
 \newcommand{\addimg}[4]{ % Добавление одного рисунка
-    \begin{figure}
+    \begin{figure}[tb]
         \centering
         \includegraphics[width=#2\linewidth]{#1}
         \caption{#3} \label{#4}
     \end{figure}
 }
-\newcommand{\addumlimg}[3]{ % Добавление tikz рисунка
-    \begin{figure}[hbt]
+\newcommand{\addCodeAsImg}[3]{ % Добавление tikz рисунка
+    \begin{figure}[tb]
         \centering
         {#1}
         \caption{#2} \label{#3}
