@@ -6,14 +6,15 @@
 \hypersetup{
     colorlinks, urlcolor={black}, % Все ссылки черного цвета, кликабельные
     linkcolor={black}, citecolor={black}, filecolor={black},
-    pdfauthor={Євгеній Воробйов},
+    pdfauthor={Воробйов Євгеній Андрійович},
     pdftitle={Проектування та розробка UI веб-додатку редагування розкладу}
 }
 
 \addbibresource{bibliography.bib} % Библиографический справочник
 
 \includeonly{
-vor/intro
+vor/titlepage
+,vor/intro
 ,vor/analyze
 ,vor/database
 ,vor/frontend
@@ -23,6 +24,7 @@ vor/intro
 
 %%% Начало документа
 \begin{document}
+\include{vor/titlepage}
 
 \tableofcontents % Содержание 
 \clearpage

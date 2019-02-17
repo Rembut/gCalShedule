@@ -6,14 +6,15 @@
 \hypersetup{
     colorlinks, urlcolor={black}, % Все ссылки черного цвета, кликабельные
     linkcolor={black}, citecolor={black}, filecolor={black},
-    pdfauthor={Денис Сенчишен},
+    pdfauthor={Сенчишен Денис Олександрович},
     pdftitle={Проектування та розробка мікросервісів для веб-додатку редагування розкладу}
 }
 
 \addbibresource{bibliography.bib} % Библиографический справочник
 
 \includeonly{
-sen/intro
+sen/titlepage
+,sen/intro
 ,sen/analyze
 ,sen/database
 ,sen/backend
@@ -23,6 +24,7 @@ sen/intro
 
 %%% Начало документа
 \begin{document}
+\include{sen/titlepage} % Титульная страница
 
 \tableofcontents % Содержание 
 \clearpage
