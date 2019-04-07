@@ -1,0 +1,53 @@
+% За основу взят github.com/Amet13/bachelor-diploma
+
+\documentclass[a4paper,14pt]{extarticle} % 14й шрифт
+\input{../preamble.tex} % Подключаем преамбулу
+
+\hypersetup{
+    colorlinks, urlcolor={black}, % Все ссылки черного цвета, кликабельные
+    linkcolor={black}, citecolor={black}, filecolor={black},
+    pdfauthor={Сенчишен Денис Олександрович},
+    pdftitle={Проектування та розробка мікросервісів для веб-додатку редагування розкладу}
+}
+
+\addbibresource{bibliography.bib} % Библиографический справочник
+
+
+%%% Начало документа
+\begin{document}
+\include{TITLEPAGE} % Титульная страница
+
+\tableofcontents % Содержание 
+\clearpage
+
+\include{INTRODUCTION} % Введение
+
+\section{АНАЛІЗ СИСТЕМ ПЛАНУВАННЯ}
+\input{Analyse-History.tex}
+\subsection{Сучасні сервіси планування та інформування}
+
+На сьогодні, кожна людина так чи інакше стикається у повсякденному житті з системами, пов'язаними з контролем часу та завдань.
+
+\input{MicrosoftOutlook.tex}
+\input{Lightning.tex}
+\input{GoogleCalendar.tex}
+\input{EnterpriseIS.tex}
+
+\section{ПРОЕКТУВАННЯ БАЗИ ДАНИХ}
+\input{History.tex}
+\input{RelationalDB.tex}
+\input{DBNormalization.tex}
+\input{PostgreSQL.tex}
+\input{ORM.tex}
+
+\section{ПРОЕКТУВАННЯ BACK-END ЧАСТИНИ}
+\input{ClientServer.tex}
+\input{Microservices.tex}
+\input{API.tex}
+\input{BackendProjecting.tex}
+
+\include{CONCLUSION} % Заключение
+\include{BIBLIOGRAPHY} % Библиографический список
+
+\end{document}
+%%% Конец документа
