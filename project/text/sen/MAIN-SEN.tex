@@ -22,37 +22,40 @@
 
 \include{INTRODUCTION} % Введение
 
-\section{АНАЛІЗ СИСТЕМ ПЛАНУВАННЯ}
-\input{Analyse-History.tex}
-\subsection{Сучасні сервіси планування та інформування}
+\section{АНАЛІЗ СИСТЕМ ПЛАНУВАННЯ ТА ІНФОРМУВАННЯ}
+\subsection{Задачі систем планування} \input{Analyse-History.tex}
 
-На сьогодні, кожна людина так чи інакше стикається у повсякденному житті з системами, пов'язаними з контролем часу та завдань.
-
+\subsection{Порівняння сучасних сервісів планування та інформування} \input{TodayServices.tex}
 \input{MicrosoftOutlook.tex}
 \input{Lightning.tex}
 \input{GoogleCalendar.tex}
-\input{EnterpriseIS.tex}
 
-\section{ПРОЕКТУВАННЯ БАЗИ ДАНИХ}
-\input{History.tex}
+\subsection{Корпоративні інформаційні системи} \input{EnterpriseIS.tex}
+\input{Ias.tex}
+\input{ComplexKsu.tex}
+
+\section{ПРОЕКТУВАННЯ ТА РОЗРОБКА СЕРВЕРНОЇ ЧАСТИНИ}
+\subsection{Клієнт-серверна архітектура веб-додатків} \input{ClientServer.tex}
+\subsection{Мікросервісна архітектура додатків} \input{Microservices.tex}
+
+\subsection{Проектування бази даних}
+\input{DbHistory.tex}
 \input{RelationalDB.tex}
 \input{DBNormalization.tex}
-\input{PostgreSQL.tex}
-\input{ORM.tex}
+\input{PostgreSql.tex}
+\input{Orm.tex}
 
-\section{ПРОЕКТУВАННЯ BACK-END ЧАСТИНИ}
-\input{ClientServer.tex}
-\input{Microservices.tex}
-
-\input{Api.tex}
+\subsection{Розробка прикладного програмного інтерфейсу} \input{Api.tex}
 \input{RestApi.tex}
 \input{SoapApi.tex}
 \input{JsonWebToken.tex}
+\input{PublicApi.tex}
 
-\input{BackendProjecting.tex}
+\subsection{Розробка мікросервісів} \input{BackendProjecting.tex}
 \input{Routes.tex}
 \input{CrudModel.tex}
-\input{PublicApi.tex}
+
+\subsection{Подальша робота}
 \input{QrCode.tex}
 
 \include{CONCLUSION} % Заключение
