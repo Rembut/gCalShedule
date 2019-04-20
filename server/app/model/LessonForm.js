@@ -1,5 +1,5 @@
 module.exports = (sequelize, Sequelize) => {
-  const Specialization = sequelize.define('specializations', {
+  const LessonForm = sequelize.define('lessonForms', {
     id: {
         type: Sequelize.INTEGER,
         primaryKey: true,
@@ -7,8 +7,11 @@ module.exports = (sequelize, Sequelize) => {
     },
     name: {
       type: Sequelize.STRING
+    },
+    shortName: {
+      type: Sequelize.STRING
     }
   });
   
-  return Specialization;
+  return LessonForm;
 }

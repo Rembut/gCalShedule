@@ -5,22 +5,25 @@ module.exports = (sequelize, Sequelize) => {
         primaryKey: true,
         autoIncrement: true
     },
-    audienceId: {
+    disciplineId: {
       type: Sequelize.INTEGER
     },
-    subjectId: {
+    teacherId: {
       type: Sequelize.INTEGER
     },
-    weekId: {
+    groupId: {
       type: Sequelize.INTEGER
     },
-    dayId: {
+    lessonFormId: {
       type: Sequelize.INTEGER
     },
-    numberId: {
+    lessonNumberId: {
       type: Sequelize.INTEGER
     },
-    subgroupId: {
+    day: {
+      type: Sequelize.INTEGER
+    },
+    week: {
       type: Sequelize.INTEGER
     },
     scheduleId: {

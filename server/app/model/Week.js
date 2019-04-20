@@ -6,9 +6,12 @@ module.exports = (sequelize, Sequelize) => {
         autoIncrement: true
     },
     number: {
-      type: Sequelize.INTEGER
+      type: Sequelize.STRING
     },
     letter: {
+      type: Sequelize.STRING
+    },
+    year: {
       type: Sequelize.STRING
     }
   });

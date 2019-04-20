@@ -11,17 +11,13 @@ module.exports = function(app) {
 
   const schedules = require('../controller/schedules.js');
 
-  const courses = require('../controller/courses.js');
-
   const days = require('../controller/days.js');
 
   const lessonNumbers = require('../controller/lessonNumbers.js');
 
-  const levels = require('../controller/levels.js');
-
   const posts = require('../controller/posts.js');
 
-  const subjectTypes = require('../controller/subjectTypes.js');
+  const lessonForm = require('../controller/lessonForm.js');
 
   const weeks = require('../controller/weeks.js');
  
@@ -37,23 +33,17 @@ module.exports = function(app) {
   // admin data
 	app.get('/api/admin', [authJwt.verifyToken, authJwt.isAdmin], admin.adminBoard);
 
-  // get all courses 
-  app.get('/api/courses', courses.findAll);
-
   // get all days
   app.get('/api/days', days.findAll);
 
   // get all lesson numbers
   app.get('/api/lessonNumbers', lessonNumbers.findAll);
 
-  // get all levels
-  app.get('/api/levels', levels.findAll);
-
   // get all posts
   app.get('/api/posts', posts.findAll);
 
   // get all subject types
-  app.get('/api/subjectTypes', subjectTypes.findAll);  
+  app.get('/api/lessonForm', lessonForm.findAll);  
 
   // get all weeks
   app.get('/api/weeks', weeks.findAll);  

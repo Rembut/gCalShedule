@@ -14,7 +14,7 @@ module.exports = (sequelize, Sequelize) => {
     usesTo: {
       type: Sequelize.DATE
     },
-    workerId: {
+    facultyId: {
       type: Sequelize.INTEGER
     }
   }, {

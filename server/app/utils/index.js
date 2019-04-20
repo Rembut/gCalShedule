@@ -4,11 +4,7 @@ const Role = db.role;
 
 const Post = db.post;
 
-const SubjectType = db.subjectType;
-
-const Course = db.course;
-
-const Level = db.level;
+const LessonForm = db.lessonForm;
 
 const Week = db.week;
 
@@ -54,51 +50,25 @@ exports.initial = () => {
     shortName: "проф" 
   });
 
-  // SubjectType
-  SubjectType.create({
+  // LessonForm
+  LessonForm.create({
     name: "лекція",
     shortName: "л" 
   });
 
-  SubjectType.create({
+  LessonForm.create({
     name: "семінар",
     shortName: "сем" 
   });
 
-  SubjectType.create({
+  LessonForm.create({
     name: "практичне заняття",
     shortName: "пр" 
   });
 
-  SubjectType.create({
+  LessonForm.create({
     name: "лабораторна робота",
     shortName: "лаб" 
-  });
-
-  // Course
-  Course.create({
-    name: "1"
-  });
-
-  Course.create({
-    name: "2"
-  });
-
-  Course.create({
-    name: "3" 
-  });
-
-  Course.create({
-    name: "4"
-  });
-
-  // Level
-  Level.create({
-    name: "бакалавр"
-  });
-
-  Level.create({
-    name: "магістр"
   });
 
   // Day

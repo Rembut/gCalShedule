@@ -5,17 +5,11 @@ module.exports = (sequelize, Sequelize) => {
         primaryKey: true,
         autoIncrement: true
     },
-    levelId: {
-      type: Sequelize.INTEGER
-    },
-    courceId: {
-      type: Sequelize.INTEGER
-    },
-    specialityId: {
-      type: Sequelize.INTEGER
-    },
-    number: {
+    name: {
       type: Sequelize.STRING
+    },
+    departmentId: {
+      type: Sequelize.INTEGER
     }
   });
   return Group;
