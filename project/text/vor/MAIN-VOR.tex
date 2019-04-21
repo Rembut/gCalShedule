@@ -1,13 +1,13 @@
 % За основу взят github.com/Amet13/bachelor-diploma
 
 \documentclass[a4paper,14pt]{extarticle} % 14й шрифт
-\input{PREAMBLE.tex} % Подключаем преамбулу
+\input{preamble} % Подключаем преамбулу
 
 \hypersetup{
     colorlinks, urlcolor={black}, % Все ссылки черного цвета, кликабельные
     linkcolor={black}, citecolor={black}, filecolor={black},
-    pdfauthor={Сенчишен Денис Олександрович},
-    pdftitle={Проектування та розробка мікросервісів для веб-додатку редагування розкладу}
+    pdfauthor={Воробйов Євгеній Андрійович},
+    pdftitle={Проектування та розробка UI веб-додатку редагування розкладу}
 }
 
 \addbibresource{bibliography.bib} % Библиографический справочник
@@ -15,7 +15,7 @@
 
 %%% Начало документа
 \begin{document}
-\include{TITLEPAGE} % Титульная страница
+\include{TITLEPAGE}
 
 \tableofcontents % Содержание 
 \clearpage
@@ -34,10 +34,7 @@
 \input{Ias.tex}
 \input{ComplexKsu.tex}
 
-\section{ПРОЕКТУВАННЯ ТА РОЗРОБКА СЕРВЕРНОЇ ЧАСТИНИ}
-\subsection{Клієнт-серверна архітектура веб-додатків} \input{ClientServer.tex}
-\subsection{Мікросервісна архітектура додатків} \input{Microservices.tex}
-
+\section{ПРОЕКТУВАННЯ FRONT-END ЧАСТИНИ}
 \subsection{Проектування бази даних}
 \input{DbHistory.tex}
 \input{RelationalDB.tex}
@@ -45,15 +42,13 @@
 \input{PostgreSql.tex}
 \input{Orm.tex}
 
-\subsection{Розробка прикладного програмного інтерфейсу} \input{Api.tex}
-\input{RestApi.tex}
-\input{SoapApi.tex}
-\input{JsonWebToken.tex}
-\input{PublicApi.tex}
+\subsection{Аналіз існуючих бібліотек для розробки SPA}
+\input{LibAnalyse.tex}
+\subsection{React}
+\input{React.tex}
+\subsection{Проектування та прототипування front-end частини}
+\input{Frontend.tex}
 
-\subsection{Розробка мікросервісів} \input{BackendProjecting.tex}
-\input{Routes.tex}
-\input{CrudModel.tex}
 
 \subsection{Подальша робота}
 \input{QrCode.tex}
