@@ -1,24 +1,11 @@
-% Auth sequence uml diagram
+\begin{umlstyle}
 
-\documentclass[a4paper,10pt]{article}
-\usepackage[english]{babel}
-\usepackage[left=3cm, right=1cm, top=1cm, bottom=1cm]{geometry}
-
-\usepackage{tikz-uml}
-
-\sloppy
-\hyphenpenalty 10000000
-
-\begin{document}
-\thispagestyle{empty}
-\begin{center}
-\begin{tikzpicture}
 \begin{umlseqdiag}
 	\umlactor[no ddots, x=1]{User}
 	\umlboundary[no ddots, x=5]{App}
 	\umldatabase[no ddots, x=14, fill=blue!20]{DB}
 	
-	\begin{umlcall}[op=get request, type=synchron, return=response, padding=3]{User}{App}
+	\begin{umlcall}[op=post request, type=synchron, return=response, padding=3]{User}{App}
 		\begin{umlfragment}[type=Auth, fill=cyan!20]
 			\umlcreatecall[no ddots, x=8]{App}{JWT}
 			\begin{umlcall}[op=init, type=synchron, return=response]{App}{JWT}
@@ -26,7 +13,7 @@
 			\end{umlcall}
 		\end{umlfragment}
 		
-		\begin{umlfragment}[type=Read, label=OK, fill=green!20]
+		\begin{umlfragment}[type=Create, label=OK, fill=green!20]
 	
 			\umlcreatecall[no ddots, x=11]{App}{Object}
 			\begin{umlcall}[op=parameters, type=synchron, return=object]{App}{Object}
@@ -40,10 +27,8 @@
 		
 		\end{umlfragment}
 	\end{umlcall}
-		
-	
-\end{umlseqdiag}
-\end{tikzpicture}
-\end{center}
 
-\end{document}
+\end{umlseqdiag}
+
+\end{umlstyle}
+

@@ -1,0 +1,64 @@
+% За основу взят github.com/Amet13/bachelor-diploma
+
+\documentclass[a4paper,14pt]{extarticle} % 14й шрифт
+\input{preamble} % Подключаем преамбулу
+
+\hypersetup{
+    colorlinks, urlcolor={black}, % Все ссылки черного цвета, кликабельные
+    linkcolor={black}, citecolor={black}, filecolor={black},
+    pdfauthor={Воробйов Євгеній Андрійович},
+    pdftitle={Проектування та розробка UI веб-додатку редагування розкладу}
+}
+
+\addbibresource{bibliography.bib} % Библиографический справочник
+
+
+%%% Начало документа
+\begin{document}
+\include{TITLEPAGE}
+
+\tableofcontents % Содержание 
+\clearpage
+
+\include{INTRODUCTION} % Введение
+
+\section{АНАЛІЗ СИСТЕМ ПЛАНУВАННЯ ТА ІНФОРМУВАННЯ}
+\subsection{Задачі систем планування} \input{Analyse-History.tex}
+
+\subsection{Порівняння сучасних сервісів планування та інформування} \input{TodayServices.tex}
+\input{MicrosoftOutlook.tex}
+\input{Lightning.tex}
+\input{GoogleCalendar.tex}
+
+\subsection{Корпоративні інформаційні системи} \input{EnterpriseIS.tex}
+\input{Ias.tex}
+\input{ComplexKsu.tex}
+
+\section{ПРОЕКТУВАННЯ FRONT-END ЧАСТИНИ}
+\subsection{Проектування бази даних}
+\input{DbHistory.tex}
+\input{RelationalDB.tex}
+\input{DBNormalization.tex}
+\input{PostgreSql.tex}
+\input{Orm.tex}
+
+\subsection{Аналіз існуючих бібліотек для розробки SPA}
+\input{LibAnalyse.tex}
+
+\subsection{React}
+\input{React.tex}
+
+\subsection{Проектування та прототипування front-end частини}
+\input{Webpack.tex}
+\input{Babel.tex}
+\input{ComponentDevelopment.tex}
+\input{StateManager.tex}
+
+\subsection{Подальша робота}
+\input{QrCode.tex}
+
+\include{CONCLUSION} % Заключение
+\include{BIBLIOGRAPHY} % Библиографический список
+
+\end{document}
+%%% Конец документа
