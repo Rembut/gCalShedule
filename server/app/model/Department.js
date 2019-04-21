@@ -10,10 +10,11 @@ module.exports = (sequelize, Sequelize) => {
     },
     shortName: {
       type: Sequelize.STRING
-    },
-    facultyId: {
-      type: Sequelize.INTEGER
-    }
+    }},
+    {
+      paranoid: true,
+      timestamps: true,
+      underscored: true
   });
   
   return Department;

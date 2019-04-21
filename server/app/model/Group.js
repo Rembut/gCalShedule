@@ -7,10 +7,11 @@ module.exports = (sequelize, Sequelize) => {
     },
     name: {
       type: Sequelize.STRING
-    },
-    departmentId: {
-      type: Sequelize.INTEGER
-    }
+    }},
+    {
+      paranoid: true,
+      timestamps: true,
+      underscored: true
   });
   return Group;
 }

@@ -146,12 +146,23 @@ exports.initial = () => {
 
   // Week 
   Week.create({
-    number: 1,
     letter: "а"
   });
 
   Week.create({
-    number: 2,
     letter: "б"
   });
+
+/*Week.destroy({
+    where: {
+          id: 1 //this will be your id that you want to delete
+       }
+    }).then(function(rowDeleted){ // rowDeleted will return number of rows deleted
+      if(rowDeleted === 1){
+         console.log('Deleted successfully');
+       }
+    }, function(err){
+        console.log(err); 
+  });*/
+
 }

@@ -13,16 +13,11 @@ module.exports = (sequelize, Sequelize) => {
     },
     usesTo: {
       type: Sequelize.DATE
-    },
-    facultyId: {
-      type: Sequelize.INTEGER
-    }
-  }, {
-    classMethods: {
-      associate: (models) => {
-        User.belogsTo(models.Schedule);
-      }
-    }
+    }},
+    {
+      paranoid: true,
+      timestamps: true,
+      underscored: true
   });
   
   return Schedule;

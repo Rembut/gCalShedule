@@ -1,5 +1,5 @@
 const env = {
-  database: 'lola2db',
+  database: 'animesobaka',
   username: 'admin',
   host: 'localhost',
   dialect: 'postgres',

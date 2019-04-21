@@ -13,7 +13,11 @@ module.exports = (sequelize, Sequelize) => {
     },
     numberOfComputers: {
       type: Sequelize.INTEGER
-    }
+    }},
+    {
+      paranoid: true,
+      timestamps: true,
+      underscored: true
   });
   
   return Audience;

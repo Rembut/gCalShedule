@@ -13,7 +13,11 @@ module.exports = (sequelize, Sequelize) => {
     },
     timeEnd: {
       type: Sequelize.STRING
-    }
+    }},
+    {
+      paranoid: true,
+      timestamps: true,
+      underscored: true
   });
   
   return lessonNumber;

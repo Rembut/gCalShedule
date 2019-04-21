@@ -13,16 +13,11 @@ module.exports = (sequelize, Sequelize) => {
     },
     patronym: {
       type: Sequelize.STRING
-    },
-    postId: {
-      type: Sequelize.INTEGER
-    },
-    departmentId: {
-      type: Sequelize.INTEGER
-    },
-    facultyId: {
-      type: Sequelize.INTEGER
-    } 
+    }},
+    {
+      paranoid: true,
+      timestamps: true,
+      underscored: true
   });
   
   return Teacher;

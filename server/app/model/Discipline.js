@@ -7,7 +7,11 @@ module.exports = (sequelize, Sequelize) => {
     },
     name: {
       type: Sequelize.STRING
-    }
+    }},
+    {
+      paranoid: true,
+      timestamps: true,
+      underscored: true
   });
   
   return Discipline;

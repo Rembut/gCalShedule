@@ -17,17 +17,12 @@ module.exports = (sequelize, Sequelize) => {
 	  },
 	  password: {
 		  type: Sequelize.STRING
-		},
-		facultyId: {
-		  type: Sequelize.INTEGER
-		}
-	}, {
-    classMethods: {
-      associate: (models) => {
-        User.hasMany(models.Schedule);
-      }
-    }
-	});
+		}},
+    {
+      paranoid: true,
+      timestamps: true,
+      underscored: true
+  });
 	
 	return User;
 }

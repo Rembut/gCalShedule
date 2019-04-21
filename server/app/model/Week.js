@@ -5,16 +5,14 @@ module.exports = (sequelize, Sequelize) => {
         primaryKey: true,
         autoIncrement: true
     },
-    number: {
-      type: Sequelize.STRING
-    },
     letter: {
       type: Sequelize.STRING
-    },
-    year: {
-      type: Sequelize.STRING
-    }
+    }},
+    {
+      paranoid: true,
+      timestamps: true,
+      underscored: true
   });
-  
+
   return Week;
 }
