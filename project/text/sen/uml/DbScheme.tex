@@ -1,61 +1,84 @@
 \begin{umlstyle}
 
-\umlclass[x=0, y=-3, fill=blue!30]{Department}{
-	+ Name \\
-	}{}
-	
-\umlclass[x=4, y=-3, fill=blue!30]{Faculty}{
-	+ Name \\
-	}{}
-	
+
 \umlclass[x=4, y=0, fill=green!30]{Teacher}{
+	+ Surname \\
 	+ Name \\
+	+ Patronym \\
 	+ Department \\
 	+ Post \\
 	}{}
+
+\umlclass[x=9, y = 12, fill=red!30]{Post}{
+	+ Name \\
+	+ ShortName \\
+}{}
+
+\umlclass[x=8, y=-9, fill=red!30]{Group}{
+	+ Name \\
+	+ Department \\
+	}{}
+
+\umlclass[x=0, y=-3, fill=blue!30]{Department}{
+	+ Name \\
+	+ ShortName \\
+	+ Faculty \\
+	}{}
 	
-\umlclass[x=8, y=0, fill=green!30]{Subject}{
-	+ Discipline \\
-	+ Type \\
-	+ Teacher \\
+\umlclass[x=8, y=0, fill=green!30]{Discipline}{
+	+ Name \\
 	}{}
 	
 \umlclass[x=12, y=-3]{Lesson}{
-	+ Subject \\
-	+ Subgroup \\
+	+ Discipline \\
 	+ Teacher \\
-	+ Audience \\
-	+ Time \\
+	+ Group \\
+	+ LessonForm \\
+	+ LessonNumber \\
+	+ Day \\
+	+ Week \\
+	+ Schedule \\
 	}{}
 	
-\umlclass[x=8, y=-3]{Schedule}{
+\umlclass[x=12, y=3]{LessonForm}{
 	+ Name \\
-	+ Using time \\
-	+ Faculty \\
-	+ Worker \\
+	+ ShortName \\	
+}{}
+
+\umlclass[x=10, y=6]{Faculty}{
+	+ Name \\
+	+ ShortName \\	
+}{}
+
+\umlclass[x=4, y=-9, fill=red!30]{LessonNumber}{
+	+ Name \\
+	}{}
+	
+\umlclass[x=8, y=-9, fill=red!30]{Day}{
+	+ Name \\
+	+ ShortName \\
+	}{}
+
+\umlclass[x=8, y=-3]{Week}{
+	+ Name \\
 	}{}
 	
 \umlclass[x=4, y=-6]{Worker}{
-	+ Name \\
+	+ Surname \\
+	+ Patronym \\
 	+ Faculty \\
-	+ Auth data \\
 	}{}
 	
-\umlclass[x=4, y=-9, fill=red!30]{Speciality}{
+\umlclass[x=4, y=-9, fill=red!30]{Schedule}{
 	+ Name \\
 	+ Chair \\
 	}{}
 	
 \umlclass[x=8, y=-9, fill=red!30]{Group}{
 	+ Name \\
-	+ Speciality \\
-	+ Cource \\
-	+ Number \\
-	}{}
-	
-\umlclass[x=12, y=-9, fill=red!30]{Subgroup}{
-	+ Group \\
-	+ Specialization \\
+	+ DateBegin \\
+	+ DateEnd \\
+	+ Faculty \\
 	}{}
 
 \umlaggreg[geometry=|-,mult1=1, mult2=n, pos1=0.2, pos2=1.9]{Department}{Teacher}
