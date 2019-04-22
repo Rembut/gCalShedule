@@ -84,3 +84,5 @@ typings/
 # visual studio path
 /.vs
 
+# mac trash file
+.DS_Store
