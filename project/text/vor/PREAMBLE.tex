@@ -134,7 +134,7 @@ url=false %все false выключают отображение полей, з
 \addto\captionsrussian{\renewcommand{\figurename}{Рис.}} % Имя фигуры
 
 % Пользовательские функции
-\usepackage{flafter} % рисунко появится не раньше первой ссылки на него
+\usepackage{flafter} % рисунок появится не раньше первой ссылки на него
 \renewcommand{\floatpagefraction}{.8}
 \renewcommand{\topfraction}{.8}
 \renewcommand{\bottomfraction}{.4}
@@ -163,10 +163,21 @@ url=false %все false выключают отображение полей, з
 \newcommand{\addtwoimghere}[5]{ % Вставка двух рисунков
     \begin{figure}[H]
         \centering
-        \includegraphics[width=#2\linewidth]{#1}
+        \includegraphics[width=#3\linewidth]{#1}
         \hfill
         \includegraphics[width=#3\linewidth]{#2}
         \caption{#4} \label{#5}
+    \end{figure}
+}
+\newcommand{\addthreeimghere}[6]{ % Вставка трех рисунков
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=#4\linewidth]{#1}
+        \hfill
+        \includegraphics[width=#4\linewidth]{#2}
+        \hfill
+        \includegraphics[width=#4\linewidth]{#3}
+        \caption{#5} \label{#6}
     \end{figure}
 }
 \newcommand{\addimgapp}[2]{ % Это костыль для приложения Б
