@@ -1,0 +1,27 @@
+\subsubsection{Бібліотеки JS}
+
+\paragraph{bcrypt.js}
+
+Optimized bcrypt in JavaScript with zero dependencies. Compatible to the C++ bcrypt binding on node.js and also working in the browser.
+
+Security considerations
+Besides incorporating a salt to protect against rainbow table attacks, bcrypt is an adaptive function: over time, the iteration count can be increased to make it slower, so it remains resistant to brute-force search attacks even with increasing computation power. (see)
+
+While bcrypt.js is compatible to the C++ bcrypt binding, it is written in pure JavaScript and thus slower (about 30\%), effectively reducing the number of iterations that can be processed in an equal time span.
+
+The maximum input length is 72 bytes (note that UTF8 encoded characters use up to 4 bytes) and the length of generated hashes is 60 characters.
+
+\paragraph{Express}
+
+При розробці використано бібліотеку Express — гнучкий фреймворк для веб-застосунків, побудованих на Node.js, що надає широкий набір функціональності, полегшуючи створення надійних API.
+
+Express забезпечує тонкий прошарок базової функціональності для веб-застосунків, що не спотворює звичну та зручну функціональність Node.js., при отриманні запиту він оброблюватиметься відповідно до визначення маршруту (рис.~\ref{fig:Route}), де app є екземпляром express, METHOD є методом HTTP-запиту, PATH є шляхом на сервері, HANDLER є функцією-обробником, що спрацьовує, коли даний маршрут затверджено як співпадаючий.
+
+\paragraph{JSON Web Token} \label{subsubsection:jwt}
+
+Для забезпечення конфіденційності при обміні даними використовується JSON Web Token. Деталі роботи з ним розглянуто в розділі \ref{subsubsection:jwt}. Для роботи з JSON Web Token використовується бібліотека jsonwebtoken.
+
+\paragraph{pg-hstore}
+
+A node package for serializing and deserializing JSON data to hstore format
+
