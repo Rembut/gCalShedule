@@ -1,7 +1,7 @@
 \begin{umlstyle}
 
 
-\umlclass[x=4, y=0, fill=green!30]{Teacher}{
+\umlclass[x=4, y=4, fill=green!30, anchor=north]{Teacher}{
 	+ Surname \\
 	+ Name \\
 	+ Patronym \\
@@ -9,27 +9,27 @@
 	+ Post \\
 	}{}
 
-\umlclass[x=9, y = 12, fill=red!30]{Post}{
+\umlclass[x=8, y=3, fill=red!30, anchor=north]{Post}{
 	+ Name \\
 	+ ShortName \\
-}{}
+	}{}
 
-\umlclass[x=8, y=-9, fill=red!30]{Group}{
+\umlclass[x=4, y=0, fill=red!30, anchor=north]{Group}{
 	+ Name \\
 	+ Department \\
 	}{}
 
-\umlclass[x=0, y=-3, fill=blue!30]{Department}{
+\umlclass[x=0, y=3, fill=blue!30, anchor=north]{Department}{
 	+ Name \\
 	+ ShortName \\
 	+ Faculty \\
 	}{}
 	
-\umlclass[x=8, y=0, fill=green!30]{Discipline}{
+\umlclass[x=8, y=0, fill=green!30, anchor=north]{Discipline}{
 	+ Name \\
 	}{}
 	
-\umlclass[x=12, y=-3]{Lesson}{
+\umlclass[x=12, y=0]{Lesson}{
 	+ Discipline \\
 	+ Teacher \\
 	+ Group \\
@@ -40,58 +40,49 @@
 	+ Schedule \\
 	}{}
 	
-\umlclass[x=12, y=3]{LessonForm}{
-	+ Name \\
-	+ ShortName \\	
-}{}
+% \umlclass[x=12, y=3]{LessonForm}{
+% 	+ Name \\
+% 	+ ShortName \\	
+% }{}
 
-\umlclass[x=10, y=6]{Faculty}{
-	+ Name \\
-	+ ShortName \\	
-}{}
+\umlclass[x=0, y=0, fill=blue!30, anchor=north]{Faculty}{
+ 	+ Name \\
+ 	+ ShortName \\	
+ }{}
 
-\umlclass[x=4, y=-9, fill=red!30]{LessonNumber}{
-	+ Name \\
-	}{}
+% \umlclass[x=4, y=-9, fill=red!30]{LessonNumber}{
+% 	+ Name \\
+% 	}{}
 	
-\umlclass[x=8, y=-9, fill=red!30]{Day}{
-	+ Name \\
-	+ ShortName \\
-	}{}
+% \umlclass[x=8, y=-9, fill=red!30]{Day}{
+% 	+ Name \\
+% 	+ ShortName \\
+% 	}{}
 
-\umlclass[x=8, y=-3]{Week}{
-	+ Name \\
-	}{}
+% \umlclass[x=8, y=-3]{Week}{
+% 	+ Name \\
+% 	}{}
 	
-\umlclass[x=4, y=-6]{Worker}{
-	+ Surname \\
-	+ Patronym \\
-	+ Faculty \\
-	}{}
+% \umlclass[x=4, y=-6]{Worker}{
+% 	+ Surname \\
+% 	+ Patronym \\
+% 	+ Faculty \\
+% 	}{}
 	
-\umlclass[x=4, y=-9, fill=red!30]{Schedule}{
-	+ Name \\
-	+ Chair \\
-	}{}
-	
-\umlclass[x=8, y=-9, fill=red!30]{Group}{
-	+ Name \\
-	+ DateBegin \\
-	+ DateEnd \\
-	+ Faculty \\
-	}{}
+% \umlclass[x=4, y=-9, fill=red!30]{Schedule}{
+% 	+ Name \\
+% 	+ Chair \\
+% 	}{}
 
-\umlaggreg[geometry=|-,mult1=1, mult2=n, pos1=0.2, pos2=1.9]{Department}{Teacher}
-\umlcompo[geometry=--,mult1=1, mult2=n, pos1=0.2, pos2=1.9]{Faculty}{Department}
-\umlassoc[geometry=--,mult1=1, mult2=1, pos1=0.2, pos2=0.9]{Subject}{Teacher}
-\umlcompo[geometry=|-,mult1=1, mult2=n, pos1=0.2, pos2=1.9]{Department}{Speciality}
-\umlassoc[geometry=--,mult1=1, mult2=1, pos1=0.2, pos2=0.9]{Speciality}{Group}
-\umlcompo[geometry=--,mult1=1, mult2=n, pos1=0.2, pos2=0.9]{Group}{Subgroup}
-\umlassoc[geometry=--,mult1=n, mult2=1, pos1=0.2, pos2=0.9]{Schedule}{Faculty}
-\umlcompo[geometry=--,mult1=1, mult2=n, pos1=0.2, pos2=1.9]{Schedule}{Lesson}
-\umlassoc[geometry=|-,mult1=n, mult2=1, pos1=0.2, pos2=1.9]{Schedule}{Worker}
-\umlassoc[geometry=--,mult1=, mult2=, pos1=0.2, pos2=1.9]{Faculty}{Worker}
-\umlassoc[geometry=--,mult1=1, mult2=1, pos1=0.2, pos2=0.9]{Lesson}{Subgroup}
-\umlassoc[geometry=|-,mult1=1, mult2=1, pos1=0.2, pos2=1.9]{Lesson}{Subject}
+% \umlaggreg[geometry=|-,mult1=1, mult2=n, pos1=0.2, pos2=1.9]{Department}{Teacher}
+% \umlcompo[geometry=--,mult1=1, mult2=n, pos1=0.2, pos2=1.9]{Faculty}{Department}
+% \umlassoc[geometry=--,mult1=1, mult2=1, pos1=0.2, pos2=0.9]{Discipline}{Teacher}
+% \umlcompo[geometry=|-,mult1=1, mult2=n, pos1=0.2, pos2=1.9]{Department}{Group}
+% \umlassoc[geometry=--,mult1=n, mult2=1, pos1=0.2, pos2=0.9]{Schedule}{Faculty}
+% \umlcompo[geometry=--,mult1=1, mult2=n, pos1=0.2, pos2=1.9]{Schedule}{Lesson}
+% \umlassoc[geometry=|-,mult1=n, mult2=1, pos1=0.2, pos2=1.9]{Schedule}{Worker}
+% \umlassoc[geometry=--,mult1=, mult2=, pos1=0.2, pos2=1.9]{Faculty}{Worker}
+% \umlassoc[geometry=--,mult1=1, mult2=1, pos1=0.2, pos2=0.9]{Lesson}{Group}
+% \umlassoc[geometry=|-,mult1=1, mult2=1, pos1=0.2, pos2=1.9]{Lesson}{Discipline}
 
 \end{umlstyle}
