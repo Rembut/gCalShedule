@@ -1,16 +1,5 @@
 \subsubsection{Бібліотеки JS}
 
-\paragraph{bcrypt.js}
-
-Optimized bcrypt in JavaScript with zero dependencies. Compatible to the C++ bcrypt binding on node.js and also working in the browser.
-
-Security considerations
-Besides incorporating a salt to protect against rainbow table attacks, bcrypt is an adaptive function: over time, the iteration count can be increased to make it slower, so it remains resistant to brute-force search attacks even with increasing computation power. (see)
-
-While bcrypt.js is compatible to the C++ bcrypt binding, it is written in pure JavaScript and thus slower (about 30\%), effectively reducing the number of iterations that can be processed in an equal time span.
-
-The maximum input length is 72 bytes (note that UTF8 encoded characters use up to 4 bytes) and the length of generated hashes is 60 characters.
-
 \paragraph{Express}
 
 При розробці використано бібліотеку Express — гнучкий фреймворк для веб-застосунків, побудованих на Node.js, що надає широкий набір функціональності, полегшуючи створення надійних API.
@@ -21,7 +10,13 @@ Express забезпечує тонкий прошарок базової фун
 
 Для забезпечення конфіденційності при обміні даними використовується JSON Web Token. Деталі роботи з ним розглянуто в розділі \ref{subsubsection:jwt}. Для роботи з JSON Web Token використовується бібліотека jsonwebtoken.
 
-\paragraph{pg-hstore}
+\paragraph{bcrypt.js}
 
-A node package for serializing and deserializing JSON data to hstore format
+Оптимізовано bcrypt в JavaScript з нульовими залежностями. Сумісний з C ++ bcrypt прив'язка на node.js і також працює в браузері.
 
+Міркування безпеки
+Крім включення солі для захисту від атак аеродинамічних таблиць, bcrypt є адаптивною функцією: з плином часу кількість ітерацій може бути збільшена, щоб зробити її більш повільною, тому вона залишається стійкою до атаки з використанням грубої сили навіть при збільшенні потужності обчислення. (подивитися)
+
+Хоча bcrypt.js є сумісним з C ++ bcrypt прив'язка, він написаний на чистому JavaScript і, таким чином, повільніше (близько 30\%), ефективно зменшуючи кількість ітерацій, які можуть бути оброблені в рівний проміжок часу.
+
+Максимальна вхідна довжина становить 72 байти (зауважимо, що символи UTF8 кодуються до 4 байт), а довжина згенерованих хешей - 60 символів.
