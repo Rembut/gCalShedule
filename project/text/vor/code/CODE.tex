@@ -1,0 +1,54 @@
+// код 5
+console.log(store.getState())
+
+{
+  visibilityFilter: 'SHOW_ALL',
+  todos: [
+    {
+      text: 'Consider using Redux',
+      completed: true,
+    },
+    {
+      text: 'Keep all state in a single tree',
+      completed: false
+    }
+  ]
+}
+
+// код 6
+store.dispatch({
+  type: 'COMPLETE_TODO',
+  index: 1
+})
+
+store.dispatch({
+  type: 'SET_VISIBILITY_FILTER',
+  filter: 'SHOW_COMPLETED'
+})
+
+// код 7
+const visibilityFilter = (state = 'SHOW\_ALL', action) => {
+  switch (action.type) {
+    case 'SET_VISIBILITY_FILTER':
+      return action.filter
+    default:
+      return state
+  }
+}
+let reducer = combineReducers({ visibilityFilter, todos })
+let store = createStore(reducer)
+
+// код 8
+.widget table row .cell .content .header .title{ 
+padding: 10px 20px; 
+font-weight: bold; 
+font-size: 2rem;
+}
+
+// код 9
+const mapDispatchToProps = dispatch => {
+  return {
+    onAddTodo: todo => dispatch(addTodo(todo))
+  }
+}
+export default connect(null, mapDispatchToProps)(NewTodo)

@@ -1,6 +1,6 @@
 \subsubsection{Бібліотеки Chai та Mocha}
 
-\addCodeAsImg{\lstinputlisting[numbers=left]{code/ChaiMochaSample.js}}{Перевірка з використанням Chai та Mocha}{fig:ChaiMochaSample}
+\addCodeAsImg{\lstinputlisting[numbers=left]{code/ChaiMochaSample.tex}}{Перевірка з використанням Chai та Mocha}{fig:ChaiMochaSample}
 
 MochaJS - це JavaScript фреймворк, який використовується для автоматичного тестування додатків. Він може використовуватися як на стороні сервера Javascript, так і в браузері. 
 
@@ -10,4 +10,14 @@ ChaiJS - це бібліотека для node.js і, як Mocha, Chai може 
 
 it() використовується для опису того, що буде протестовано в цьому блоці коду. Дозволено писати вкладені описи describe() і it().
 
+В процесі роботи використовувалися засоби як ручного, так і автоматичного тестування. 
+Можна окремо виділити тести наступних підсистем:
+
+\begin{enumerate}
+    \item запуск системи та відсутність  критичних помилок часу виконання на початковому етапі;
+    \item підключення до бази даних;
+    \item виконання CRUD-операцій над об'єктами;
+    \item підключення до сторонніх сервісів, що використовуються в роботі;
+    \item успішна взаємодія з Google API.
+\end{enumerate}
 

@@ -15,7 +15,7 @@
 
 %%% Начало документа
 \begin{document}
-\include{TITLEPAGE}
+\include{titlepage}
 
 \tableofcontents % Содержание 
 \clearpage
@@ -27,51 +27,34 @@
 \subsection{Задачі систем планування} \input{Analyse-History.tex}
 
 \subsection{Порівняння сервісів та додатків планування} \input{TodayServices.tex}
-\input{MicrosoftOutlook.tex}
-\input{Lightning.tex}
-\input{GoogleCalendar.tex}
+\input{ComplexPlaningSystem.tex}
 \input{MobileApplications.tex}
 
 \subsection{Корпоративні інформаційні системи} \input{EnterpriseIS.tex}
-\input{Ias.tex}
-\input{ComplexKsu.tex}
 
-\subsection{Обгрунтування використаних технологій} \input{Technologies.tex}
-\input{SemanticVersion.tex}
-gis
-\input{Latex.tex}
-\input{Git.tex}
+\subsection{Обґрунтування використаних технологій} \input{Technologies.tex}
 \input{JsLibraries.tex}
 
-\section{ПРОЕКТУВАННЯ FRONT-END ЧАСТИНИ}
+\clearpage
+\section{ПРОЕКТУВАННЯ ТА РОЗРОБКА КЛІЄНТСЬКОЇ ЧАСТИНИ}
 
-\subsection{Проектування бази даних}
-\input{DbHistory.tex}
-\input{RelationalDB.tex}
-\input{DBNormalization.tex}
-\input{PostgreSql.tex}
-\input{Orm.tex}
-
-\subsection{Розробка SPA}
+\subsection{Розробка SPA використовуючи бібліотеку React}
 \input{LibAnalyse.tex}
 \input{React.tex}
-
-\subsection{Проектування та прототипування front-end частини}
-\input{Webpack.tex}
-\input{Babel.tex}
+\input{Bundler.tex}
 \input{ComponentDevelopment.tex}
+
+\subsection{Розробка мобільного додатку}
+\input{MobileAppDev.tex}
+
+\subsection{Менеджери стану}
 \input{StateManager.tex}
 
-\subsection{Покриття тестами}
+\subsection{Контроль якості програмного забезпечення}
 \input{TestingTasks.tex}
-\input{ManualTesting.tex}
-\input{AutomationTesting.tex}
 
-\subsection{Подальша робота}
-\input{QrCode.tex}
-
-\include{CONCLUSION} % Заключение
-\include{BIBLIOGRAPHY} % Библиографический список
+\include{conclusion} % Заключение
+\include{bibliography} % Библиографический список
 
 \end{document}
 %%% Конец документа

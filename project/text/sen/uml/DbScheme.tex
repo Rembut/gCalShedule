@@ -9,7 +9,7 @@
 	+ Post \\
 	}{}
 
-\umlclass[x=8, y=3, fill=red!30, anchor=north]{Post}{
+\umlclass[x=8, y=4, fill=red!30, anchor=north]{Post}{
 	+ Name \\
 	+ ShortName \\
 	}{}
@@ -19,7 +19,7 @@
 	+ Department \\
 	}{}
 
-\umlclass[x=0, y=3, fill=blue!30, anchor=north]{Department}{
+\umlclass[x=0, y=4, fill=blue!30, anchor=north]{Department}{
 	+ Name \\
 	+ ShortName \\
 	+ Faculty \\
@@ -29,7 +29,7 @@
 	+ Name \\
 	}{}
 	
-\umlclass[x=12, y=0]{Lesson}{
+\umlclass[x=12, y=4, anchor=north]{Lesson}{
 	+ Discipline \\
 	+ Teacher \\
 	+ Group \\
@@ -74,15 +74,17 @@
 % 	+ Chair \\
 % 	}{}
 
-% \umlaggreg[geometry=|-,mult1=1, mult2=n, pos1=0.2, pos2=1.9]{Department}{Teacher}
-% \umlcompo[geometry=--,mult1=1, mult2=n, pos1=0.2, pos2=1.9]{Faculty}{Department}
+\umlaggreg[geometry=-|,mult1=1, mult2=n, pos1=0.2, pos2=1.9]{Department}{Teacher}
+\umlcompo[geometry=--,mult1=1, mult2=, pos1=0.4, pos2=1.9]{Faculty}{Department}
 % \umlassoc[geometry=--,mult1=1, mult2=1, pos1=0.2, pos2=0.9]{Discipline}{Teacher}
 % \umlcompo[geometry=|-,mult1=1, mult2=n, pos1=0.2, pos2=1.9]{Department}{Group}
 % \umlassoc[geometry=--,mult1=n, mult2=1, pos1=0.2, pos2=0.9]{Schedule}{Faculty}
 % \umlcompo[geometry=--,mult1=1, mult2=n, pos1=0.2, pos2=1.9]{Schedule}{Lesson}
 % \umlassoc[geometry=|-,mult1=n, mult2=1, pos1=0.2, pos2=1.9]{Schedule}{Worker}
-% \umlassoc[geometry=--,mult1=, mult2=, pos1=0.2, pos2=1.9]{Faculty}{Worker}
-% \umlassoc[geometry=--,mult1=1, mult2=1, pos1=0.2, pos2=0.9]{Lesson}{Group}
+\umlassoc[geometry=-|,mult1=, mult2=, pos1=0.2, pos2=1.9]{Teacher}{Post}
+\umlassoc[geometry=--,mult1=, mult2=, pos1=0.2, pos2=1.9]{Group}{Faculty}
+\umlassoc[geometry=|-,mult1=, mult2=, pos1=0.2, pos2=0.9]{Lesson}{Group}
+\umlassoc[geometry=-|,mult1=, mult2=, pos1=0.2, pos2=0.9]{Lesson}{Teacher}
 % \umlassoc[geometry=|-,mult1=1, mult2=1, pos1=0.2, pos2=1.9]{Lesson}{Discipline}
 
 \end{umlstyle}

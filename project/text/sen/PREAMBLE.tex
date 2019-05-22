@@ -34,7 +34,6 @@ backend=biber, %подключение пакета biber (тоже нужен)
 bibstyle=gost-numeric, %подключение одного из четырех главных стилей biblatex-gost 
 citestyle=numeric-comp, %подключение стиля стиля (а вот!) 
 language=auto, %указание сортировки языков
-babel=other, %указание языков
 sorting=ntvy, %тип сортировки в библиографии
 doi=false, 
 eprint=false, 
@@ -45,7 +44,7 @@ url=false %все false выключают отображение полей, з
 
 \usepackage{import} % Разбиение текста проекта на файлы
 
-\usepackage{import} % Разбиение текста проекта на файлы
+\usepackage[figure,table]{totalcount}
 
 \usepackage{amssymb,amsfonts,amsmath} % Математика
 \usepackage{tikz-uml} %  UML диаграммы
@@ -86,8 +85,8 @@ url=false %все false выключают отображение полей, з
 
 % Отступы у страниц
 \usepackage{geometry}
-\geometry{left=4.5cm}
-\geometry{right=1cm}
+\geometry{left=4cm}
+\geometry{right=1.5cm}
 \geometry{top=2cm}
 \geometry{bottom=2cm}
 
