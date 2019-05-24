@@ -39,6 +39,7 @@ doi=false,
 eprint=false, 
 isbn=false, 
 dashed=false, 
+date=year,
 url=false %все false выключают отображение полей, заполненных в библиографической базе, но не актуальных для печатного листа
 ]{biblatex} % Библиография
 
@@ -104,12 +105,19 @@ url=false %все false выключают отображение полей, з
 
 % Содержание
 \usepackage{tocloft}
-\renewcommand{\cfttoctitlefont}{\hspace{0.38\textwidth}\MakeTextUppercase} % СОДЕРЖАНИЕ
-\renewcommand{\cftsecfont}{\hspace{0pt}}            % Имена секций в содержании не жирным шрифтом
+\renewcommand{\cfttoctitlefont}{\hspace{0.38\textwidth}\bfseries\MakeTextUppercase} % СОДЕРЖАНИЕ
+\renewcommand{\cftsecfont}{\bfseries\hspace{0pt}}   % Имена секций в содержании жирным шрифтом
 \renewcommand\cftsecleader{\cftdotfill{\cftdotsep}} % Точки для секций в содержании
 \renewcommand\cftsecpagefont{\mdseries}             % Номера страниц не жирные
 \setcounter{tocdepth}{3}                            % Глубина оглавления, до subsection
 \setcounter{secnumdepth}{4}                         % Глубина нумерации, до paragraph
+
+\renewcommand\cftsecpresnum{РОЗДІЛ }
+\renewcommand\cftsecaftersnum{.}
+
+\newlength\mylen
+\settowidth\mylen{\bfseries РОЗДІЛ 1.\ } % if more than 9, use "Chapter 10"
+\cftsetindents{sec}{0pt}{\mylen}
 
 % Нумерация страниц справа сверху
 \usepackage{fancyhdr}
@@ -198,30 +206,36 @@ url=false %все false выключают отображение полей, з
     \else
         \expandafter\@secondoftwo
     \fi
-    {\oldcontentsline{#1}{\MakeTextUppercase{#2}}}
+    {\oldcontentsline{#1}{#2}}
     {\oldcontentsline{#1}{#2}}
 }
 \makeatother
 
 % Оформление заголовков
 \usepackage[compact,explicit]{titlesec}
-\titleformat{\section}{}{}{0mm}{\centering\bfseries{\thesection\quad\MakeTextUppercase{#1}}}
-\titleformat{\subsection}[block]{\vspace{1em}}{}{12.5mm}{\thesubsection\quad#1}
-\titleformat{\subsubsection}[block]{\vspace{1em}\normalsize}{}{12.5mm}{\thesubsubsection\quad#1}
-\titleformat{\paragraph}[block]{\vspace{1em}\normalfont\normalsize}{}{12.5mm}{\theparagraph\quad#1}
+\titleformat{\section}{}{}{0mm}{\centering\bfseries{РОЗДІЛ \thesection\quad\\\MakeTextUppercase{#1}}}
+\titleformat{\subsection}[block]{\vspace{1em}}{}{12.5mm}{\bfseries\thesubsection.\quad#1}
+\titleformat{\subsubsection}[block]{\vspace{1em}\normalsize}{}{12.5mm}{\bfseries\thesubsubsection.\quad#1}
+\titleformat{\paragraph}[block]{\vspace{1em}\normalfont\normalsize}{}{12.5mm}{\bfseries\theparagraph.\quad#1}
+\titleformat{\subparagraph}[block]{\vspace{1em}\normalfont\normalsize}{}{12.5mm}{#1}
+
+\titlespacing{\section}{0pt}{*1}{*5}
+\titlespacing{\subsection}{0pt}{*4}{*5}
+\titlespacing{\subsubsection}{0pt}{*4}{*1}
+\titlespacing{\paragraph}{0pt}{*4}{*1}
 
 \pdfstringdefDisableCommands{\let\uppercase\relax} % \uppercase не поддерживается в закладках pdf
 
 % Секции без номеров (введение, заключение...), вместо section*{}
 \newcommand{\anonsection}[1]{
-    {\centering\bfseries{#1}\par}
+    {\centering\bfseries{#1}\par\vskip 1cm}
     \phantomsection % Корректный переход по ссылкам в содержании
     \addcontentsline{toc}{section}{\uppercase{#1}}
 }
 
 % Секции для приложений
 \newcommand{\appsection}[1]{
-    {\centering\bfseries{#1}\par}
+    {\centering\bfseries{#1}\par\vskip 1cm}
     \phantomsection
     \addcontentsline{toc}{section}{\uppercase{#1}}
 }
