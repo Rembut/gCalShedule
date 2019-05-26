@@ -1,0 +1,12 @@
+it('should pass a selected value to the onChange handler', () => {
+    const value = '2';
+    const onChange = jest.fn();
+    const wrapper = shallow(
+        <SelectLesson items={ITEMS} onChange={onChange} />
+    );
+    expect(wrapper).toMatchSnapshot()
+        wrapper.find('select').simulate('change', {
+        target: { value },
+    })
+    expect(onChange).toBeCalledWith(value)
+})

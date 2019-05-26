@@ -1,0 +1,14 @@
+export default class SelectGroup extends React.Component {
+  constructor(props) {super(props)}
+  render() {return (
+      <View style={styles.container}>
+        <ScrollView style={styles.container} contentContainerStyle={styles.signInContentContainer}>
+        <Text style={styles.startedText}>Вкажiть групу</Text>
+          <View style={styles.inputs} onChangeText={(value) => this.props.onChangeGroup({group: value})}>
+           <Sae label={'Наприклад, 411'} iconName={'pencil'} activeColor={'#000'} passiveColor={'#D0D3D8'} />
+          </View>
+          <TouchableOpacity style={styles.buttonContainer} onPress={() => this.props.save()}>
+            <Text style={styles.buttonStyle}>Перейти до розкладу</Text>
+          </TouchableOpacity>
+        </ScrollView>   
+      </View> ) } }

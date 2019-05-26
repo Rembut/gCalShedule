@@ -1,0 +1,15 @@
+class ScheduleData extends Component {
+  constructor(props) {super(props)}
+  render() {
+    return (
+      <div className={style.dataLoyaut}>
+      <p className={style.dataTitle}>{this.props.match.params.data}</p>
+       <div className={style.searchInputContainer}>
+          <Search className={style.searchInput} onSearch={value => this.props.search(value)}/>
+          <Link to='/users/create'><Button className={style.createButton}>Create new</Button></Link>
+        </div>
+        <Table pagination={false} columns={this.props.data} dataSource={this.props.data}/>
+      </div>
+    )
+  }
+}
