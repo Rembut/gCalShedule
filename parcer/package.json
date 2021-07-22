@@ -19,7 +19,7 @@
     "fs": "0.0.1-security",
     "googleapis": "^27.0.0",
     "md5": "^2.2.1",
-    "xlsx": "^0.14.1"
+    "xlsx": "^0.17.0"
   },
   "devDependencies": {},
   "description": ""
